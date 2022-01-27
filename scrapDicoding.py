@@ -1,18 +1,25 @@
 from bs4 import BeautifulSoup
 import requests
+import time
 
 html_text = requests.get(
     'https://www.dicoding.com/academies/list').text
 soup = BeautifulSoup(html_text, 'lxml')
-courses = soup.find_all(
-    'div', class_="cta-to-detail")
 
-peoples = soup.find_all('div', class_="d-flex justify-content-between pt-3")
-print(peoples)
-for people in peoples:
-    result = people.find("div", class_="js-enrollment-count")
-    print(result)
+if str(body.text).find('loading...') > 1:
+    print(body.text)
 
+time.sleep(30)
+
+# peoples = soup.find_all(
+#     'div', class_="shuffle-item")
+# print(peoples)
+# people = peoples.find('span', class_="js-enrollment-count")
+# print(people)
+# for people in peoples:
+#     result = people.find("span", class_="js-enrollment-count").text.strip()
+#     print(result)
+print(soup)
 # print(courses)
 # for course in courses:
 #     # section1 = course.find("div", class_="cta-to-detail")
