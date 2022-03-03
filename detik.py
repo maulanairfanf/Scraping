@@ -1,78 +1,73 @@
+from re import sub
 from bs4 import BeautifulSoup
 import requests
+import webbrowser
 
 
+url = "https://www.detik.com/"
+webbrowser.open(url)
 html_text = requests.get(
-    'https://www.detik.com/').text
+    url).text
 soup = BeautifulSoup(html_text, 'lxml')
 headlines = soup.find_all(
     'article', class_="list-content__item column")
-news = soup.find_all('div', class_="article_inview")
+news_c = soup.find_all('div', class_="article_inview")
+news_d = soup.find_all('article', class_="article_inview")
 
 
+def rules(sub_soup, link):
 
-# for headline in headlines:
-#     data = []
-#     link = headline.a["href"]
-#     html_links = requests.get(link).text
-#     soup_headlines = BeautifulSoup(html_links, 'lxml')
-
-#     if(soup_headlines.find('h1', class_="detail__title")):
-#         title = soup_headlines.find('h1', class_="detail__title").text
-#     else:
-#         title = soup_headlines.find('h1', class_="mt5").text
-
-#     if (soup_headlines.find('div', class_="detail__author")):
-#         author = soup_headlines.find('div', class_="detail__author").text
-#     elif (soup_headlines.find('div', class_="color-gray-light-1 font-xs")):
-#         author = soup_headlines.find('div', class_="color-gray-light-1 font-xs").text
-#     else:
-#         authro = soup_headlines.find('div', class_="valign").text
-
-#     if(soup_headlines.find('div', class_="detail__date")):
-#         date = soup_headlines.find('div', class_="detail__date").text
-#     else:
-#         date = soup_headlines.find('div', class_="date").text
-
-#     # body = soup_headlines.find(
-#     #     "div", class_="detail__body-text itp_bodycontent")
-#     # if (body.find_all('p')):
-#     #     contents = body.find_all('p').text
-#     #     for content in contents:
-#     #         data.append(content.text)
-
-#     print(f"Link Berita : {link.strip()}")
-#     print(f"Judul Berita : {title.strip()}")
-#     print(f"Author : {author.strip()}")
-#     print(f"Date : {date.strip()}")
-# print("Isi Berita :", data)
-
-# print("")
-
-for new in news:
-    link_news = new["i-link"]
-    html_links_news = requests.get(link_news).text
-    soup_news = BeautifulSoup(html_links_news, 'lxml')
-
-    if(soup_news.find('h1', class_="detail__title")):
-        title = soup_news.find('h1', class_="detail__title").text
+    if(sub_soup.find('h1', class_="detail__title")):
+        title = sub_soup.find('h1', class_="detail__title").text
+    elif (sub_soup.find('h1', class_="mt5")):
+        title = sub_soup.find('h1', class_="mt5").text
     else:
-        title = soup_news.find('h1', class_="mt5").text
+        title = sub_soup.find('h1').text
 
-    if (soup_news.find('div', class_="detail__author")):
-        author = soup_news.find('div', class_="detail__author").text
-    elif (soup_news.find('div', class_="color-gray-light-1 font-xs")):
-        author = soup_news.find(
+    if (sub_soup.find('div', class_="detail__author")):
+        author = sub_soup.find('div', class_="detail__author").text
+    elif (sub_soup.find('div', class_="color-gray-light-1 font-xs")):
+        author = sub_soup.find(
             'div', class_="color-gray-light-1 font-xs").text
+    elif (sub_soup.find('div', class_="valign")):
+        author = sub_soup.find('div', class_="valign").text
     else:
-        authro = soup_news.find('div', class_="valign").text
+        author = sub_soup.find('span', class_="author").text
 
-    if(soup_news.find('div', class_="detail__date")):
-        date = soup_news.find('div', class_="detail__date").text
+    if(sub_soup.find('div', class_="detail__date")):
+        date = sub_soup.find('div', class_="detail__date").text
     else:
-        date = soup_news.find('div', class_="date").text
+        date = sub_soup.find(class_="date").text
 
-    print(f"Link Berita : {link_news.strip()}")
+    print(f"Link Berita : {link.strip()}")
     print(f"Judul Berita : {title.strip()}")
     print(f"Author : {author.strip()}")
     print(f"Date : {date.strip()}")
+
+
+for headline in headlines:
+    data = []
+    link_headlines = headline.a["href"]
+    html_links = requests.get(link_headlines).text
+    soup_headlines = BeautifulSoup(html_links, 'lxml')
+
+    rules(soup_headlines, link_headlines)
+
+print("==================================================")
+
+for new_c in news_c:
+    link_news_c = new_c["i-link"]
+    html_links_news_c = requests.get(link_news_c).text
+    soup_news_c = BeautifulSoup(html_links_news_c, 'lxml')
+
+    rules(soup_news_c, link_news_c)
+
+print("==================================================")
+
+
+for new_d in news_d:
+    link_news_d = new_d["i-link"]
+    html_links_news_d = requests.get(link_news_d).text
+    soup_news_d = BeautifulSoup(html_links_news_d, 'lxml')
+
+    rules(soup_news_d, link_news_d)
