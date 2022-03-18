@@ -1,11 +1,11 @@
-from re import sub
+import re
 from bs4 import BeautifulSoup
 import requests
 import webbrowser
 
 
 url = "https://www.detik.com/"
-webbrowser.open(url)
+# webbrowser.open(url)
 html_text = requests.get(
     url).text
 soup = BeautifulSoup(html_text, 'lxml')
@@ -14,6 +14,14 @@ headlines = soup.find_all(
 news = soup.find_all(['div', 'article'], class_="article_inview")
 # news_c = soup.find_all('div', class_="article_inview")
 # news_d = soup.find_all('article', class_="article_inview")
+
+
+def configureDate(day):
+    return day.split(', ')[-1]
+
+
+def configureAuthor(site):
+    return site.split('-')[0]
 
 
 def rules(sub_soup, link):
@@ -25,36 +33,41 @@ def rules(sub_soup, link):
     else:
         title = sub_soup.find('h1').text
 
-    # author
+    # Author
+    # detikOto #sepakbola #detiknews #detikFinance #detikInet
     if (sub_soup.find('div', class_="detail__author")):
-        author = sub_soup.find('div', class_="detail__author").text
-    elif (sub_soup.find('div', class_="color-gray-light-1 font-xs")):
+        # sub_soup.find('span', class_="detail__label").decompose()
+        author = sub_soup.find(
+            'div', class_="detail__author").text
+    elif (sub_soup.find('div', class_="color-gray-light-1 font-xs")):  # 20Detik
         author = sub_soup.find(
             'div', class_="color-gray-light-1 font-xs").text
     elif (sub_soup.find('div', class_="ugc__block__name")):
-        author = sub_soup.find('div', class_="ugc__block__name").text
-    elif (sub_soup.find('span', class_="author")):
+        author = sub_soup.find('div', class_="ugc__block__name").a.text
+    elif (sub_soup.find('span', class_="author")):  # detikHealth #wolipop
         author = sub_soup.find('span', class_="author").text
     else:
-        author = sub_soup.find(text="Penulis:")
+        author = "Kerangka berbeda"
 
     # date
     if(sub_soup.find('div', class_="detail__date")):
-        date = sub_soup.find('div', class_="detail__date").text
+        date = sub_soup.find(
+            'div', class_="detail__date").text
     elif (sub_soup.find(class_="date")):
         date = sub_soup.find(class_="date").text
-    else:
+    elif(sub_soup.find('div', class_="caption")):
         date = sub_soup.find('div', class_="caption").span.text
+    else:
+        date = "Kerangka berbeda"
 
     print(f"Link Berita : {link.strip()}")
     print(f"Judul Berita : {title.strip()}")
-    print(f"Author : {author.strip()}")
-    print(f"Date : {date.strip()}")
+    print(f"Author : {configureAuthor(author).strip()}")
+    print(f"Date : {configureDate(date).strip()}")
     print(" ")
 
 
 for headline in headlines:
-    data = []
     link_headlines = headline.a["href"]
     html_links = requests.get(link_headlines).text
     soup_headlines = BeautifulSoup(html_links, 'lxml')

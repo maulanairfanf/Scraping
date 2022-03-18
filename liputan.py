@@ -24,7 +24,7 @@ def rules(sub_soup, link):
             'h1', class_="read-page--header--title entry-title").text
 
         date = sub_soup.find(
-            'time', class_="read-page--header--author__datetime updated").text
+            'time', class_="read-page--header--author__datetime updated").text.replace(',', '')
 
         author = sub_soup.find('span',
                                class_="read-page--header--author__name fn").text

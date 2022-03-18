@@ -1,10 +1,9 @@
-from re import sub
 from bs4 import BeautifulSoup
 import requests
 import webbrowser
 
 url = "https://www.tribunnews.com/"
-webbrowser.open(url)
+# webbrowser.open(url)
 html_text = requests.get(
     url).text
 soup = BeautifulSoup(html_text, 'lxml')
@@ -12,6 +11,7 @@ headlines = soup.find_all('a', class_="ovh tsa2 pos_rel hladvthumb")
 news = soup.find_all('a', class_="f20 ln24 fbo txt-oev-2")
 news_famous = soup.find_all('a', class_="fbo2 f15 txt-oev-3")
 news_stories = soup.find_all('a', class_="fbo2 f14 al txt-oev-3")
+print(soup)
 
 
 def rules(sub_soup, link):
