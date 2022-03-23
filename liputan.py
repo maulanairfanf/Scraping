@@ -17,6 +17,10 @@ news_famous = soup.find_all('h5', class_="article-snippet--numbered__title")
 # print(news_famous)
 
 
+def configureDate(day):
+    return day.split(', ')[-1].replace("Jan", "Januari").replace("Feb", "Februari").replace("Mar", "Maret").replace("Apr", "April").replace("Jun", "Juni").replace("Jul", "Juli").replace("Agu", "Agustus").replace("Sep", "Sepptember").replace("Nov", "November").replace("Des", "Desember")
+
+
 def rules(sub_soup, link):
     if (sub_soup.find(
             'h1', class_="read-page--header--title entry-title")):
@@ -32,7 +36,7 @@ def rules(sub_soup, link):
         print(f"Link Berita : {link.strip()}")
         print(f"Judul Berita : {title.strip()}")
         print(f"Author : {author.strip()}")
-        print(f"Date : {date.strip()}")
+        print(f"Date : {configureDate(date).strip()}")
         print(" ")
 
 

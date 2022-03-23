@@ -17,7 +17,7 @@ news = soup.find_all(['div', 'article'], class_="article_inview")
 
 
 def configureDate(day):
-    return day.split(', ')[-1]
+    return day.split(', ')[-1].replace("Jan", "Januari").replace("Feb", "Februari").replace("Mar", "Maret").replace("Apr", "April").replace("Jun", "Juni").replace("Jul", "Juli").replace("Agu", "Agustus").replace("Sep", "Sepptember").replace("Nov", "November").replace("Des", "Desember")
 
 
 def configureAuthor(site):
