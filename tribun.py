@@ -20,27 +20,48 @@ def configureDate(day):
 
 
 def rules(sub_soup, link):
+    print("link : ", link)
+    # print(sub_soup)
     if (sub_soup.find('h1', class_="f50 black2 f400 crimson")):
         title = sub_soup.find('h1', class_="f50 black2 f400 crimson").text
     elif (sub_soup.find('h1', class_="crimson")):
         title = sub_soup.find('h1', class_="crimson").text
     else:
-        print('kerangka website berbeda')
+        title = 'Kerangka belum dikenali'
 
     if(sub_soup.find('time')):
         date = sub_soup.find('time').text
     else:
-        author = "kerangka website berbeda"
+        author = "Kerangka belum dikenali"
 
     if (sub_soup.find('div', id="penulis")):
         author = sub_soup.find('div', id="penulis").a.text
     else:
-        author = "kerangka website berbeda"
+        author = "Kerangka belum dikenali"
+
+    if(sub_soup.find('div', class_="side-article txt-article multi-fontsize")):
+        content = sub_soup.find(
+            'div', class_="side-article txt-article multi-fontsize")
+        if(content.find('p', class_="baca")):
+            reads = content.find_all('p', class_="baca")
+            for read in reads:
+                read.decompose()
+
+        if(content.find('div', class_="_popIn_recommend_art_title")):
+            recommends = content.find_all(
+                'div', class_="_popIn_recommend_art_title")
+            for recommend in recommends:
+                recommend.decompose()
+        # if(content.find('strong')):
+        #     get_text = content.find('strong').text
+    else:
+        content = "Kerangka belum dikenali"
+
     print(f"Link Berita : {link.strip()}")
     print(f"Judul Berita : {title.strip()}")
     print(f"Author : {author.strip()}")
     print(f"Date : {configureDate(date).strip()}")
-    print(" ")
+    print(f"Isi Berita : {content.text.strip()}")
 
 
 for headline in headlines:
@@ -48,7 +69,6 @@ for headline in headlines:
     html_link_headline = requests.get(link_headline, headers=headers).text
     soup_headline = BeautifulSoup(html_link_headline, 'lxml')
     rules(soup_headline, link_headline)
-
 for new in news:
     link_new = new['href']
     html_link_new = requests.get(link_new, headers=headers).text
