@@ -14,30 +14,78 @@ headlines = soup.find_all(
 news = soup.find_all(
     'a', class_="ui--a articles--iridescent-list--text-item__title-link")
 news_famous = soup.find_all('h5', class_="article-snippet--numbered__title")
-# print(news_famous)
 
 
 def configureDate(day):
-    return day.split(', ')[-1].replace("Jan", "Januari").replace("Feb", "Februari").replace("Mar", "Maret").replace("Apr", "April").replace("Jun", "Juni").replace("Jul", "Juli").replace("Agu", "Agustus").replace("Sep", "Sepptember").replace("Nov", "November").replace("Des", "Desember")
+    return day.replace("Jan", "Januari").replace("Feb", "Februari").replace("Mar", "Maret").replace("Apr", "April").replace("Jun", "Juni").replace("Jul", "Juli").replace("Agu", "Agustus").replace("Sep", "Sepptember").replace("Nov", "November").replace("Des", "Desember").replace(',', '')
 
 
 def rules(sub_soup, link):
+    # print(link)
     if (sub_soup.find(
             'h1', class_="read-page--header--title entry-title")):
         title = sub_soup.find(
             'h1', class_="read-page--header--title entry-title").text
+    elif(sub_soup.find('h1', class_="read-page--photo-tag--header__title")):
+        title = sub_soup.find(
+            "h1", class_="read-page--photo-tag--header__title").text
+    else:
+        title = "Kerangka belum dikenali"
 
+    if (sub_soup.find(
+            'time', class_="read-page--header--author__datetime updated")):
         date = sub_soup.find(
-            'time', class_="read-page--header--author__datetime updated").text.replace(',', '')
+            'time', class_="read-page--header--author__datetime updated").text
+    elif (sub_soup.find(
+            'time', class_="read-page--photo-tag--header__datetime updated")):
+        date = sub_soup.find(
+            'time', class_="read-page--photo-tag--header__datetime updated").text
+    else:
+        date = "Kerangka belum dikenali"
 
-        author = sub_soup.find('span',
-                               class_="read-page--header--author__name fn").text
+    if (sub_soup.find('span', class_="read-page--header--author__name fn")):
+        author = sub_soup.find(
+            'span', class_="read-page--header--author__name fn").text
+    elif (sub_soup.find('div', class_="read-page--photo-tag--header__credits-user")):
+        author = sub_soup.find(
+            'div', class_="read-page--photo-tag--header__credits-user").text
+    else:
+        author = "Kerangka belum dikenali"
 
-        print(f"Link Berita : {link.strip()}")
-        print(f"Judul Berita : {title.strip()}")
-        print(f"Author : {author.strip()}")
-        print(f"Date : {configureDate(date).strip()}")
-        print(" ")
+    if (sub_soup.find_all(
+            'div', class_="article-content-body__item-content")):
+        contents = sub_soup.find_all(
+            'div', class_="article-content-body__item-content")
+
+        arr_Content = []
+
+        for data_content in contents:
+            if(data_content.find('div', class_="baca-juga-collections")):
+                data_content.find(
+                    'div', class_="baca-juga-collections").decompose()
+            if(data_content.find('div', class_="baca-juga")):
+                data_content.find('div', class_="baca-juga").decompose()
+            if(data_content.find('strong')):
+                save_tag = data_content.find('strong')
+                get_char = data_content.find('strong').text
+                if(get_char[0] == "*"):
+                    data_content.find('strong').decompose()
+
+            arr_Content.append(data_content.text)
+
+        content = "".join(arr_Content)
+    elif (sub_soup.find("div", class_="read-page--photo-tag--header__content")):
+        content = sub_soup.find(
+            "div", class_="read-page--photo-tag--header__content").text
+    else:
+        content = "Kerangka belum dikenali"
+
+    print(f"Link Berita : {link.strip()}")
+    print(f"Judul Berita : {title.strip()}")
+    print(f"Author : {author.strip()}")
+    print(f"Date : {configureDate(date).strip()}")
+    print(f"Isi Berita: {content.strip()} ")
+    print(" ")
 
 
 link_main = main_news['href']
