@@ -25,6 +25,7 @@ def configureAuthor(site):
 
 
 def rules(sub_soup, link):
+    print("Link : ", link)
     # title
     if(sub_soup.find('h1', class_="detail__title")):
         title = sub_soup.find('h1', class_="detail__title").text
@@ -60,18 +61,62 @@ def rules(sub_soup, link):
     else:
         date = "Kerangka berbeda"
 
-    print(f"Link Berita : {link.strip()}")
-    print(f"Judul Berita : {title.strip()}")
-    print(f"Author : {configureAuthor(author).strip()}")
-    print(f"Date : {configureDate(date).strip()}")
+    # content
+    if(sub_soup.find('div', class_="detail__body-text itp_bodycontent")) :
+        contents = sub_soup.find('div', class_="detail__body-text itp_bodycontent")
+        arr_content = []
+        for data_content in contents.find_all("p") :
+            arr_content.append(data_content.text)
+        content = arr_content
+        # if(content.find('table', class_="linksisip")) :
+        #     content.find('table', class_="linksisip").decompose()
+        # if(content.find('div', class_="detail__long-nav")) :
+        #     content.find('a', class_="btn btn--blue-base btn--sm mgb-24").decompose()
+        #     content.find('div', class_="detail__anchor").decompose()
+        #     content.find('div', class_="color-blue-base font-xs font-heading mgb-8").decompose()
+        # if(content.find('div', class_="detail__body-tag mgt-16")) :
+        #     content.find('div', class_="detail__body-tag mgt-16").decompose()
+        # print(content)'
+    elif(sub_soup.find('div', class_="itp_bodycontent read__content pull-left")) :
+        contents = sub_soup.find('div', class_="itp_bodycontent read__content pull-left")
+        arr_content = []
+        for data_content in contents.find_all("p") :
+            arr_content.append(data_content.text)
+        content = arr_content
+        # print(content)
+    elif(sub_soup.find('div', class_="itp_bodycontent detail__body-text")) :
+        contents = sub_soup.find('div', class_="itp_bodycontent detail__body-text")
+        arr_content = []
+        for data_content in contents.find_all("p") :
+            arr_content.append(data_content.text)
+        content = arr_content
+        print(content)
+    elif(sub_soup.find('article', class_="detail")) :
+        content_1 = sub_soup.find('div', class_="detail__body-text").text.replace("\n","")
+        content_2 = sub_soup.find('figcaption', class_="mgt-16").text
+        content = []
+        content.append(content_1)
+        content.append(content_2)
+        # print(content)
+    else:
+        print("Content gagal")
+
+
+
+    # print(content)
+
+    # print(f"Link Berita : {link.strip()}")
+    # print(f"Judul Berita : {title.strip()}")
+    # print(f"Author : {configureAuthor(author).strip()}")
+    # print(f"Date : {configureDate(date).strip()}")
     print(" ")
 
 
-for headline in headlines:
-    link_headlines = headline.a["href"]
-    html_links = requests.get(link_headlines).text
-    soup_headlines = BeautifulSoup(html_links, 'lxml')
-    rules(soup_headlines, link_headlines)
+# for headline in headlines:
+#     link_headlines = headline.a["href"]
+#     html_links = requests.get(link_headlines).text
+#     soup_headlines = BeautifulSoup(html_links, 'lxml')
+#     rules(soup_headlines, link_headlines)
 
 for new in news:
     link_news = new["i-link"]
