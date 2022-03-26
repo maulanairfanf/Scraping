@@ -21,7 +21,8 @@ def configureDate(day):
 
 def rules(sub_soup, link):
     print("link : ", link)
-    # print(sub_soup)
+
+    #title
     if (sub_soup.find('h1', class_="f50 black2 f400 crimson")):
         title = sub_soup.find('h1', class_="f50 black2 f400 crimson").text
     elif (sub_soup.find('h1', class_="crimson")):
@@ -29,16 +30,19 @@ def rules(sub_soup, link):
     else:
         title = 'Kerangka belum dikenali'
 
+    #time
     if(sub_soup.find('time')):
         date = sub_soup.find('time').text
     else:
         author = "Kerangka belum dikenali"
 
+    #author
     if (sub_soup.find('div', id="penulis")):
         author = sub_soup.find('div', id="penulis").a.text
     else:
         author = "Kerangka belum dikenali"
 
+    #content
     if(sub_soup.find('div', class_="side-article txt-article multi-fontsize")):
         content = sub_soup.find(
             'div', class_="side-article txt-article multi-fontsize")
@@ -52,8 +56,12 @@ def rules(sub_soup, link):
                 'div', class_="_popIn_recommend_art_title")
             for recommend in recommends:
                 recommend.decompose()
-        # if(content.find('strong')):
-        #     get_text = content.find('strong').text
+        
+        arr_content = []
+        for data_content in content.find_all("p") :
+            arr_content.append(data_content.text)
+        content = "".join(arr_content)
+        
     else:
         content = "Kerangka belum dikenali"
 
@@ -61,28 +69,24 @@ def rules(sub_soup, link):
     print(f"Judul Berita : {title.strip()}")
     print(f"Author : {author.strip()}")
     print(f"Date : {configureDate(date).strip()}")
-    print(f"Isi Berita : {content.text.strip()}")
+    print(f"Isi Berita : {content.strip()}")
+    print("")
 
 
-for headline in headlines:
-    link_headline = headline['href']
-    html_link_headline = requests.get(link_headline, headers=headers).text
-    soup_headline = BeautifulSoup(html_link_headline, 'lxml')
-    rules(soup_headline, link_headline)
-for new in news:
+def setUp(new) :
     link_new = new['href']
     html_link_new = requests.get(link_new, headers=headers).text
     soup_new = BeautifulSoup(html_link_new, 'lxml')
     rules(soup_new, link_new)
 
+for headline in headlines:
+    setUp(headline)
+    
+for new in news:
+    setUp(new)
+
 for new_famous in news_famous:
-    link_new_famous = new_famous['href']
-    html_link_new_famous = requests.get(link_new_famous, headers=headers).text
-    soup_new_famous = BeautifulSoup(html_link_new_famous, 'lxml')
-    rules(soup_new_famous, link_new_famous)
+    setUp(new_famous)
 
 for new_story in news_stories:
-    link_new_story = new_story['href']
-    html_link_new_story = requests.get(link_new_story, headers=headers).text
-    soup_new_story = BeautifulSoup(html_link_new_story, 'lxml')
-    rules(soup_new_story, link_new_story)
+    setUp(new_story)

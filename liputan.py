@@ -57,11 +57,9 @@ def rules(sub_soup, link):
         contents = sub_soup.find_all(
             'div', class_="article-content-body__item-content")
 
-        arr_Content = []
+        arr_content = []
 
         for data_content in contents:
-            print(data_content)
-            print("")
             if(data_content.find('div', class_="baca-juga-collections")):
                 data_content.find(
                     'div', class_="baca-juga-collections").decompose()
@@ -71,10 +69,13 @@ def rules(sub_soup, link):
                 get_char = data_content.find('strong').text
                 if(get_char[0] == "*"):
                     data_content.find('strong').decompose()
+            arr_data = []
+            for data in data_content.find_all('p'):
+                arr_data.append(data.text)
+            merge_content = "".join(arr_data)
+            arr_content.append(merge_content)
 
-            arr_Content.append(data_content.text)
-
-        content = "".join(arr_Content)
+        content = "".join(arr_content)
     elif (sub_soup.find("div", class_="read-page--photo-tag--header__content")):
         content = sub_soup.find(
             "div", class_="read-page--photo-tag--header__content").text
@@ -85,9 +86,15 @@ def rules(sub_soup, link):
     print(f"Judul Berita : {title.strip()}")
     print(f"Author : {author.strip()}")
     print(f"Date : {configureDate(date).strip()}")
-    print(f"Isi Berita: {content.strip()} ")
+    # print(f"Isi Berita: {content.strip()} ")
     print(" ")
 
+
+def setUp(new) :
+    link_new = new['href']
+    html_link_new = requests.get(link_new).text
+    soup_new = BeautifulSoup(html_link_new, 'lxml')
+    rules(soup_new, link_new)
 
 link_main = main_news['href']
 html_link_main = requests.get(link_main).text
@@ -95,19 +102,11 @@ soup_main = BeautifulSoup(html_link_main, 'lxml')
 rules(soup_main, link_main)
 
 for headline in headlines:
-    link_headline = headline['href']
-    html_link_headline = requests.get(link_headline).text
-    soup_headline = BeautifulSoup(html_link_headline, 'lxml')
-    rules(soup_headline, link_headline)
+    setUp(headline)
 
 for new in news:
-    link_new = new['href']
-    html_link_new = requests.get(link_new).text
-    soup_new = BeautifulSoup(html_link_new, 'lxml')
-    rules(soup_new, link_new)
+    setUp(new)
 
 for new_famous in news_famous:
-    link_new_famous = new_famous.a['href']
-    html_link_new_famous = requests.get(link_new_famous).text
-    soup_new_famous = BeautifulSoup(html_link_new_famous, 'lxml')
-    rules(soup_new_famous, link_new_famous)
+    setUp(news_famous)
+
