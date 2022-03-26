@@ -1,10 +1,8 @@
 from re import sub
 from bs4 import BeautifulSoup
 import requests
-import webbrowser
 
 url = "https://www.liputan6.com/"
-# webbrowser.open(url)
 html_text = requests.get(
     url).text
 soup = BeautifulSoup(html_text, 'lxml')
@@ -21,7 +19,7 @@ def configureDate(day):
 
 
 def rules(sub_soup, link):
-    print("link : ", link)
+    # print("link : ", link)
     if (sub_soup.find(
             'h1', class_="read-page--header--title entry-title")):
         title = sub_soup.find(
@@ -86,15 +84,20 @@ def rules(sub_soup, link):
     print(f"Judul Berita : {title.strip()}")
     print(f"Author : {author.strip()}")
     print(f"Date : {configureDate(date).strip()}")
-    # print(f"Isi Berita: {content.strip()} ")
+    print(f"Isi Berita: {content.strip()} ")
     print(" ")
 
 
-def setUp(new) :
-    link_new = new['href']
+def setUp(new, category):
+    if(category == 'famous'):
+        print("True")
+        link_new = new.a['href']
+    else:
+        link_new = new['href']
     html_link_new = requests.get(link_new).text
     soup_new = BeautifulSoup(html_link_new, 'lxml')
     rules(soup_new, link_new)
+
 
 link_main = main_news['href']
 html_link_main = requests.get(link_main).text
@@ -102,11 +105,10 @@ soup_main = BeautifulSoup(html_link_main, 'lxml')
 rules(soup_main, link_main)
 
 for headline in headlines:
-    setUp(headline)
+    setUp(headline, 'nothing')
 
 for new in news:
-    setUp(new)
+    setUp(new, 'nothing')
 
 for new_famous in news_famous:
-    setUp(news_famous)
-
+    setUp(new_famous, 'famous')

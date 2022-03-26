@@ -1,11 +1,9 @@
 import re
 from bs4 import BeautifulSoup
 import requests
-# import webbrowser
 
 
 url = "https://www.detik.com/"
-# webbrowser.open(url)
 html_text = requests.get(
     url).text
 soup = BeautifulSoup(html_text, 'lxml')
@@ -23,36 +21,40 @@ def configureDate(day):
 def configureAuthor(site):
     return site.split('-')[0]
 
+
 def loopContent_P(contents):
     arr_content = []
-    for data_content in contents.find_all("p") :
+    for data_content in contents.find_all("p"):
         arr_content.append(data_content.text)
     content = "".join(arr_content)
     return content
 
-def loopContent(contents) :
+
+def loopContent(contents):
     arr_content = []
-    for data_content in contents :
+    for data_content in contents:
         arr_content.append(data_content.text)
     content = "".join(arr_content)
     return content
 
-def decomposeNav(contents) :
+
+def decomposeNav(contents):
     if(contents.find('div', class_="mp-nav mp-nav-ap mp-nav-bot ap-update")):
-        contents.find('div', class_="mp-nav mp-nav-ap mp-nav-bot ap-update").decompose()
+        contents.find(
+            'div', class_="mp-nav mp-nav-ap mp-nav-bot ap-update").decompose()
     return contents
 
 
 def rules(sub_soup, link):
-    print("Link : ", link)
+    # print("Link : ", link)
     # title
     if(sub_soup.find('h1', class_="detail__title")):
         title = sub_soup.find('h1', class_="detail__title").text
     elif (sub_soup.find('h1', class_="mt5")):
         title = sub_soup.find('h1', class_="mt5").text
-    elif (sub_soup.find('h1')) :
+    elif (sub_soup.find('h1')):
         title = sub_soup.find('h1').text
-    else :
+    else:
         title = "Kerangka belum dikenali"
 
     # Author
@@ -83,72 +85,86 @@ def rules(sub_soup, link):
         date = "Kerangka belum dikenali"
 
     # content
-    if(sub_soup.find('div', class_="detail__body-text itp_bodycontent")) : 
-        contents = sub_soup.find('div', class_="detail__body-text itp_bodycontent")
-        content = loopContent_P(contents)
-        # print(content) #hilangin baca juga 
-    elif(sub_soup.find('div', class_="itp_bodycontent read__content pull-left")) : 
-        contents = sub_soup.find('div', class_="itp_bodycontent read__content pull-left")
+    if(sub_soup.find('div', class_="detail__body-text itp_bodycontent")):
+        contents = sub_soup.find(
+            'div', class_="detail__body-text itp_bodycontent")
+        get_texts = contents.find_all('strong')
+        for get_text in get_texts:
+            if(get_text.text.split(':')[0] == "Baca juga"):
+                get_text.decompose()
+        content = loopContent(contents)
+        print(content)
+    elif(sub_soup.find('div', class_="itp_bodycontent read__content pull-left")):
+        contents = sub_soup.find(
+            'div', class_="itp_bodycontent read__content pull-left")
         content = loopContent_P(contents)
         # print(content)
-    elif(sub_soup.find('div', class_="itp_bodycontent detail__body-text")) :
-        contents = sub_soup.find('div', class_="itp_bodycontent detail__body-text")
+    elif(sub_soup.find('div', class_="itp_bodycontent detail__body-text")):
+        contents = sub_soup.find(
+            'div', class_="itp_bodycontent detail__body-text")
         content = loopContent_P(contents)
         # print(content)
-    elif(sub_soup.find('article', class_="detail")) : #content 2 body
-        content_1 = sub_soup.find('div', class_="detail__body-text").text.replace("\n","")
+    elif(sub_soup.find('article', class_="detail")):  # content 2 body
+        content_1 = sub_soup.find(
+            'div', class_="detail__body-text").text.replace("\n", "")
         content_2 = sub_soup.find('figcaption', class_="mgt-16").text
         arr_content = []
         arr_content.append(content_1)
         arr_content.append(content_2)
-        content = "".join(arr_content)  
+        content = "".join(arr_content)
         # print(content)
-    elif(sub_soup.find('div', class_="detail__body-text")) : 
+    elif(sub_soup.find('div', class_="detail__body-text")):
         content = sub_soup.find('div', class_="detail__body-text").text
         # print(content)
-    elif(sub_soup.find('div', class_="column full body_text")) : #detik intermeso
+    elif(sub_soup.find('div', class_="column full body_text")):  # detik intermeso
         contents = sub_soup.find_all('div', class_="column full body_text")
         arr_content = []
-        for data_content in contents :
+        for data_content in contents:
             arr_content.append(loopContent_P(data_content))
         content = "".join(arr_content)
         # print(content) #hilangin penulis
-    elif(sub_soup.find('div', class_="itp_bodycontent detail_text group")) : 
-        contents = sub_soup.find('div', class_="itp_bodycontent detail_text group")
+    elif(sub_soup.find('div', class_="itp_bodycontent detail_text group")):
+        contents = sub_soup.find(
+            'div', class_="itp_bodycontent detail_text group")
         decomposeNav(contents)
         content = loopContent_P(contents)
         # print(content)
-    elif(sub_soup.find('div', class_="itp_bodycontent detail_text")) :
+    elif(sub_soup.find('div', class_="itp_bodycontent detail_text")):
         contents = sub_soup.find('div', class_="itp_bodycontent detail_text")
         decomposeNav(contents)
         content = loopContent_P(contents)
         # print(content)
     elif(sub_soup.find('p', class_="text_par mt20")):
         content = sub_soup.find('p', class_="text_par mt20").text
+    elif(sub_soup.find('div', class_="detail_text group detail_text2")):
+        content = sub_soup.find(
+            'div', class_="detail_text group detail_text2").text
     else:
         print("Content gagal")
 
-
-    # print(content)
-
-    print(f"Link Berita : {link.strip()}")
-    print(f"Judul Berita : {title.strip()}")
-    print(f"Author : {configureAuthor(author).strip()}")
-    print(f"Date : {configureDate(date).strip()}")
+    # print(f"Link Berita : {link.strip()}")
+    # print(f"Judul Berita : {title.strip()}")
+    # print(f"Author : {configureAuthor(author).strip()}")
+    # print(f"Date : {configureDate(date).strip()}")
     # print(f"Isi Berita : {content.strip()}")
-    print(" ")
+    # print(" ")
 
-def setUp(new) :
-    link_new = new['href']
+
+def setUp(new, link):
+    if(link == "headline"):
+        link_new = new.a['href']
+    else:
+        link_new = new['i-link']
     html_link_new = requests.get(link_new).text
     soup_new = BeautifulSoup(html_link_new, 'lxml')
     rules(soup_new, link_new)
 
+
 for headline in headlines:
-    setUp(headline)
+    setUp(headline, 'headline')
 
 for new in news:
-    setUp(new)
+    setUp(new, 'i-link')
 
 # for new_c in news_c:
 #     setUp(new_c)
