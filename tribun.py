@@ -19,7 +19,7 @@ def configureDate(day):
 
 
 def rules(sub_soup, link):
-    # print("link : ", link)
+    print("link : ", link)
 
     # title
     if (sub_soup.find('h1', class_="f50 black2 f400 crimson")):
@@ -36,10 +36,12 @@ def rules(sub_soup, link):
         author = "Kerangka belum dikenali"
 
     # author
-    if (sub_soup.find('div', id="penulis")):
-        author = sub_soup.find('div', id="penulis").a.text
+    if (sub_soup.find('div', id=["penulis", "editor"])):
+        author = sub_soup.find('div', id=["penulis", "editor"]).a.text
+    # elif (sub_soup.find('div', id="editor")):
+    #     author = sub_soup.findn('div', id="editor").a.text
     else:
-        author = "Kerangka belum dikenali"
+        author = "Kerangka belum dikenali / Author tidak dipublikasikan"
 
     # content
     if(sub_soup.find('div', class_="side-article txt-article multi-fontsize")):

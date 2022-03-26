@@ -42,11 +42,13 @@ def decomposeNav(contents):
     if(contents.find('div', class_="mp-nav mp-nav-ap mp-nav-bot ap-update")):
         contents.find(
             'div', class_="mp-nav mp-nav-ap mp-nav-bot ap-update").decompose()
+    if(contents.find('div', class_="detail__long-nav")):
+        contents.find('div', class_="detail__long-nav").decompose()
     return contents
 
 
 def rules(sub_soup, link):
-    # print("Link : ", link)
+    print("Link : ", link)
     # title
     if(sub_soup.find('h1', class_="detail__title")):
         title = sub_soup.find('h1', class_="detail__title").text
@@ -92,8 +94,9 @@ def rules(sub_soup, link):
         for get_text in get_texts:
             if(get_text.text.split(':')[0] == "Baca juga"):
                 get_text.decompose()
-        content = loopContent(contents)
-        print(content)
+        decomposeNav(contents)
+        content = loopContent_P(contents)
+        # print(content)
     elif(sub_soup.find('div', class_="itp_bodycontent read__content pull-left")):
         contents = sub_soup.find(
             'div', class_="itp_bodycontent read__content pull-left")
@@ -139,14 +142,16 @@ def rules(sub_soup, link):
     elif(sub_soup.find('div', class_="detail_text group detail_text2")):
         content = sub_soup.find(
             'div', class_="detail_text group detail_text2").text
+    elif(sub_soup.find('div', class_="newstag newstag2")):
+        content = sub_soup.find('div', class_="newstag newstag2").text
     else:
-        print("Content gagal")
+        content = "Kerangka belum dikenali"
 
     # print(f"Link Berita : {link.strip()}")
     # print(f"Judul Berita : {title.strip()}")
     # print(f"Author : {configureAuthor(author).strip()}")
     # print(f"Date : {configureDate(date).strip()}")
-    # print(f"Isi Berita : {content.strip()}")
+    print(f"Isi Berita : {content.strip()}")
     # print(" ")
 
 
