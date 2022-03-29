@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 import requests
 import csv
 import pandas as pd
-# import webbrowser
+import json
 
 url = "https://www.tribunnews.com/"
 headers = {
@@ -20,7 +20,7 @@ def configureDate(day):
     return day.split(', ')[-1]
 
 
-def rules(sub_soup, link):
+def rules(sub_soup, link, category):
     # print("link : ", link)
 
     # title
@@ -35,7 +35,7 @@ def rules(sub_soup, link):
     if(sub_soup.find('time')):
         date = sub_soup.find('time').text
     else:
-        author = "Kerangka belum dikenali"
+        date = "Kerangka belum dikenali"
 
     # author
     if (sub_soup.find('div', id=["penulis", "editor"])):
@@ -67,46 +67,36 @@ def rules(sub_soup, link):
 
     else:
         content = "Kerangka belum dikenali"
-
-    list_author.append(author.strip())
-    list_title.append(title.strip())
-    list_date.append(configureDate(date).strip())
-    list_link.append(link.strip())
-    list_content.append(content.strip())
-
-    # print(f"Link Berita : {link.strip()}")
-    # print(f"Judul Berita : {title.strip()}")
-    # print(f"Author : {author.strip()}")
-    # print(f"Date : {configureDate(date).strip()}")
-    # print(f"Isi Berita : {content.strip()}")
-    # print("")
+        
+    if(category == "popular") :
+        listTribun.append({'title' : title.strip(),'author ' : author.strip(), 'date' : configureDate(date).strip(), 'category' : 'popular','link' : link, 'content' : content,'website' : 'tribun.com'}) 
+    else:
+        listTribun.append({'title' : title.strip(),'author ' : author.strip(), 'date' : configureDate(date).strip(), 'category' : 'biasa','link' : link, 'content' : content,'website' : 'tribun.com'}) 
 
 
-def setUp(new):
+def setUp(new,category):
     link_new = new['href']
     html_link_new = requests.get(link_new, headers=headers).text
     soup_new = BeautifulSoup(html_link_new, 'lxml')
-    rules(soup_new, link_new)
+    rules(soup_new, link_new,category)
 
-list_author = []
-list_title = []
-list_date = []
-list_link = []
-list_content = []
+listTribun = []
+
 
 for headline in headlines:
-    setUp(headline)
+    setUp(headline,'biasa')
 
 for new in news:
-    setUp(new)
+    setUp(new,'biasa')
 
 for new_famous in news_famous:
-    setUp(new_famous)
+    setUp(new_famous,'popular')
 
 for new_story in news_stories:
-    setUp(new_story)
+    setUp(new_story,'biasa')
 
+print(json.dumps(listTribun))
 
-items = {'Author' : list_author ,'Judul Berita' : list_title, 'Date' : list_date, "Link" : list_link, "Content" : list_content}
-df = pd.DataFrame(items)
-df.to_csv("tribun.csv")
+# items = {'Author' : list_author ,'Judul Berita' : list_title, 'Date' : list_date, "Link" : list_link, "Content" : list_content}
+# df = pd.DataFrame(items)
+# df.to_csv("tribun.csv")

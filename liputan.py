@@ -1,7 +1,9 @@
 from re import sub
+from unicodedata import category
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
+import json
 
 url = "https://www.liputan6.com/"
 html_text = requests.get(
@@ -19,7 +21,7 @@ def configureDate(day):
     return day.replace("Jan", "Januari").replace("Feb", "Februari").replace("Mar", "Maret").replace("Apr", "April").replace("Jun", "Juni").replace("Jul", "Juli").replace("Agu", "Agustus").replace("Sep", "Sepptember").replace("Nov", "November").replace("Des", "Desember").replace(',', '')
 
 
-def rules(sub_soup, link):
+def kerangkaLiputan(sub_soup, link,category):
     # print("link : ", link)
     if (sub_soup.find(
             'h1', class_="read-page--header--title entry-title")):
@@ -81,50 +83,41 @@ def rules(sub_soup, link):
     else:
         content = "Kerangka belum dikenali"
 
-    list_author.append(author.strip())
-    list_title.append(title.strip())
-    list_date.append(configureDate(date).strip())
-    list_link.append(link.strip())
-    list_content.append(content.strip())
-
-    # print(f"Link Berita : {link.strip()}")
-    # print(f"Judul Berita : {title.strip()}")
-    # print(f"Author : {author.strip()}")
-    # print(f"Date : {configureDate(date).strip()}")
-    # print(f"Isi Berita: {content.strip()} ")
-    # print(" ")
+    if(category == "popular") :
+        listLiputan.append({'title' : title.strip(),'author ' : author.strip(), 'date' : configureDate(date).strip(), 'category' : 'popular','link' : link, 'content' : content,'website' : 'tribun.com'}) 
+    else:
+        listLiputan.append({'title' : title.strip(),'author ' : author.strip(), 'date' : configureDate(date).strip(), 'biasa' : 'popular','link' : link, 'content' : content,'website' : 'tribun.com'}) 
 
 
 def setUp(new, category):
-    if(category == 'famous'):
+    if(category == 'popular'):
         link_new = new.a['href']
     else:
         link_new = new['href']
+    
     html_link_new = requests.get(link_new).text
     soup_new = BeautifulSoup(html_link_new, 'lxml')
-    rules(soup_new, link_new)
+    kerangkaLiputan(soup_new,link_new,category)
 
-list_author = []
-list_title = []
-list_date = []
-list_link = []
-list_content = []
+listLiputan = []
 
 link_main = main_news['href']
 html_link_main = requests.get(link_main).text
 soup_main = BeautifulSoup(html_link_main, 'lxml')
-rules(soup_main, link_main)
+kerangkaLiputan(soup_main, link_main,category)
 
 for headline in headlines:
-    setUp(headline, 'nothing')
+    setUp(headline, 'biasa')
 
 for new in news:
-    setUp(new, 'nothing')
+    setUp(new, 'biasa')
 
 for new_famous in news_famous:
-    setUp(new_famous, 'famous')
+    setUp(new_famous, 'popular')
 
+print(json.dumps(listLiputan))
 
-items = {'Author' : list_author ,'Judul Berita' : list_title, 'Date' : list_date, "Link" : list_link, "Content" : list_content}
-df = pd.DataFrame(items)
-df.to_csv("liputan.csv")
+# items = {'Author' : list_author ,'Judul Berita' : list_title, 'Date' : list_date, "Link" : list_link, "Content" : list_content}
+# df = pd.DataFrame(items)
+# df.to_csv("liputan.csv")
+

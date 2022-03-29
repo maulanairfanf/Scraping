@@ -2,6 +2,9 @@ import re
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
+import json
+
+from setuptools import setup
 
 
 url = "https://www.detik.com/"
@@ -11,6 +14,7 @@ soup = BeautifulSoup(html_text, 'lxml')
 headlines = soup.find_all(
     'article', class_="list-content__item column")
 news = soup.find_all(['div', 'article'], class_="article_inview")
+link_new_famous = soup.find('div', class_="box cb-mostpop").find('a',class_="btn btn--default color-orange-light-1 btn--md")['href']
 # news_c = soup.find_all('div', class_="article_inview")
 # news_d = soup.find_all('article', class_="article_inview")
 
@@ -48,7 +52,7 @@ def decomposeNav(contents):
     return contents
 
 
-def rules(sub_soup, link):
+def kerangkaDetik(sub_soup, link, category):
     # print("Link : ", link)
     # title
     if(sub_soup.find('h1', class_="detail__title")):
@@ -148,35 +152,33 @@ def rules(sub_soup, link):
     else:
         content = "Kerangka belum dikenali"
 
-    list_author.append(author.strip())
-    list_title.append(title.strip())
-    list_date.append(configureDate(date).strip())
-    list_link.append(link.strip())
-    list_content.append(content.strip())
-
-    # print(f"Link Berita : {link.strip()}")
-    # print(f"Judul Berita : {title.strip()}")
-    # print(f"Author : {configureAuthor(author).strip()}")
-    # print(f"Date : {configureDate(date).strip()}")
-    # print(f"Isi Berita : {content.strip()}")
-    # print(" ")
-
-
-
-def setUp(new, link):
-    if(link == "headline"):
-        link_new = new.a['href']
+    if(category == "popular") :
+        listDetik.append({'title' : title.strip(),'author ' : author.strip(), 'date' : configureDate(date).strip(), 'category' : 'popular','link' : link, 'content' : content,'website' : 'tribun.com'}) 
     else:
+        listDetik.append({'title' : title.strip(),'author ' : author.strip(), 'date' : configureDate(date).strip(), 'category' : 'biasa','link' : link, 'content' : content,'website' : 'tribun.com'}) 
+
+
+def setUp(new,category):
+    if(category == "headline" or category =="popular"):
+        if(category == 'headline') :
+            category = "biasa"
+        link_new = new.a['href']
+    else :
         link_new = new['i-link']
+        category = 'biasa'
     html_link_new = requests.get(link_new).text
     soup_new = BeautifulSoup(html_link_new, 'lxml')
-    rules(soup_new, link_new)
+    kerangkaDetik(soup_new, link_new,category)
 
-list_author = []
-list_title = []
-list_date = []
-list_link = []
-list_content = []
+listDetik = []
+
+link_famous = link_new_famous
+html_link_famous = requests.get(link_famous).text
+soup_main = BeautifulSoup(html_link_famous, 'lxml')
+famous = soup_main.find_all('article', class_="list-content__item")
+
+for many_famous in famous :
+    setUp(many_famous,'popular')
 
 for headline in headlines:
     setUp(headline, 'headline')
@@ -184,12 +186,8 @@ for headline in headlines:
 for new in news:
     setUp(new, 'i-link')
 
-# for new_c in news_c:
-#     setUp(new_c)
+print(json.dumps(listDetik))
 
-# for new_d in news_d:
-#     setUp(new_c)
-
-items = {'Author' : list_author ,'Judul Berita' : list_title, 'Date' : list_date, "Link" : list_link, "Content" : list_content}
-df = pd.DataFrame(items)
-df.to_csv("detik.csv")
+# items = {'Author' : list_author ,'Judul Berita' : list_title, 'Date' : list_date, "Link" : list_link, "Content" : list_content}
+# df = pd.DataFrame(items)
+# df.to_csv("detik.csv")
