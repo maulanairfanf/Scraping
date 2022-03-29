@@ -1,6 +1,7 @@
 import re
 from bs4 import BeautifulSoup
 import requests
+import pandas as pd
 
 
 url = "https://www.detik.com/"
@@ -48,7 +49,7 @@ def decomposeNav(contents):
 
 
 def rules(sub_soup, link):
-    print("Link : ", link)
+    # print("Link : ", link)
     # title
     if(sub_soup.find('h1', class_="detail__title")):
         title = sub_soup.find('h1', class_="detail__title").text
@@ -147,12 +148,19 @@ def rules(sub_soup, link):
     else:
         content = "Kerangka belum dikenali"
 
+    list_author.append(author.strip())
+    list_title.append(title.strip())
+    list_date.append(configureDate(date).strip())
+    list_link.append(link.strip())
+    list_content.append(content.strip())
+
     # print(f"Link Berita : {link.strip()}")
     # print(f"Judul Berita : {title.strip()}")
     # print(f"Author : {configureAuthor(author).strip()}")
     # print(f"Date : {configureDate(date).strip()}")
-    print(f"Isi Berita : {content.strip()}")
+    # print(f"Isi Berita : {content.strip()}")
     # print(" ")
+
 
 
 def setUp(new, link):
@@ -164,6 +172,11 @@ def setUp(new, link):
     soup_new = BeautifulSoup(html_link_new, 'lxml')
     rules(soup_new, link_new)
 
+list_author = []
+list_title = []
+list_date = []
+list_link = []
+list_content = []
 
 for headline in headlines:
     setUp(headline, 'headline')
@@ -176,3 +189,7 @@ for new in news:
 
 # for new_d in news_d:
 #     setUp(new_c)
+
+items = {'Author' : list_author ,'Judul Berita' : list_title, 'Date' : list_date, "Link" : list_link, "Content" : list_content}
+df = pd.DataFrame(items)
+df.to_csv("detik.csv")

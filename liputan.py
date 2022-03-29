@@ -1,6 +1,7 @@
 from re import sub
 from bs4 import BeautifulSoup
 import requests
+import pandas as pd
 
 url = "https://www.liputan6.com/"
 html_text = requests.get(
@@ -80,17 +81,22 @@ def rules(sub_soup, link):
     else:
         content = "Kerangka belum dikenali"
 
-    print(f"Link Berita : {link.strip()}")
-    print(f"Judul Berita : {title.strip()}")
-    print(f"Author : {author.strip()}")
-    print(f"Date : {configureDate(date).strip()}")
-    print(f"Isi Berita: {content.strip()} ")
-    print(" ")
+    list_author.append(author.strip())
+    list_title.append(title.strip())
+    list_date.append(configureDate(date).strip())
+    list_link.append(link.strip())
+    list_content.append(content.strip())
+
+    # print(f"Link Berita : {link.strip()}")
+    # print(f"Judul Berita : {title.strip()}")
+    # print(f"Author : {author.strip()}")
+    # print(f"Date : {configureDate(date).strip()}")
+    # print(f"Isi Berita: {content.strip()} ")
+    # print(" ")
 
 
 def setUp(new, category):
     if(category == 'famous'):
-        print("True")
         link_new = new.a['href']
     else:
         link_new = new['href']
@@ -98,6 +104,11 @@ def setUp(new, category):
     soup_new = BeautifulSoup(html_link_new, 'lxml')
     rules(soup_new, link_new)
 
+list_author = []
+list_title = []
+list_date = []
+list_link = []
+list_content = []
 
 link_main = main_news['href']
 html_link_main = requests.get(link_main).text
@@ -112,3 +123,8 @@ for new in news:
 
 for new_famous in news_famous:
     setUp(new_famous, 'famous')
+
+
+items = {'Author' : list_author ,'Judul Berita' : list_title, 'Date' : list_date, "Link" : list_link, "Content" : list_content}
+df = pd.DataFrame(items)
+df.to_csv("liputan.csv")

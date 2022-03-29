@@ -1,5 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
+import csv
+import pandas as pd
 # import webbrowser
 
 url = "https://www.tribunnews.com/"
@@ -19,7 +21,7 @@ def configureDate(day):
 
 
 def rules(sub_soup, link):
-    print("link : ", link)
+    # print("link : ", link)
 
     # title
     if (sub_soup.find('h1', class_="f50 black2 f400 crimson")):
@@ -66,12 +68,18 @@ def rules(sub_soup, link):
     else:
         content = "Kerangka belum dikenali"
 
-    print(f"Link Berita : {link.strip()}")
-    print(f"Judul Berita : {title.strip()}")
-    print(f"Author : {author.strip()}")
-    print(f"Date : {configureDate(date).strip()}")
-    print(f"Isi Berita : {content.strip()}")
-    print("")
+    list_author.append(author.strip())
+    list_title.append(title.strip())
+    list_date.append(configureDate(date).strip())
+    list_link.append(link.strip())
+    list_content.append(content.strip())
+
+    # print(f"Link Berita : {link.strip()}")
+    # print(f"Judul Berita : {title.strip()}")
+    # print(f"Author : {author.strip()}")
+    # print(f"Date : {configureDate(date).strip()}")
+    # print(f"Isi Berita : {content.strip()}")
+    # print("")
 
 
 def setUp(new):
@@ -80,6 +88,11 @@ def setUp(new):
     soup_new = BeautifulSoup(html_link_new, 'lxml')
     rules(soup_new, link_new)
 
+list_author = []
+list_title = []
+list_date = []
+list_link = []
+list_content = []
 
 for headline in headlines:
     setUp(headline)
@@ -92,3 +105,8 @@ for new_famous in news_famous:
 
 for new_story in news_stories:
     setUp(new_story)
+
+
+items = {'Author' : list_author ,'Judul Berita' : list_title, 'Date' : list_date, "Link" : list_link, "Content" : list_content}
+df = pd.DataFrame(items)
+df.to_csv("tribun.csv")
