@@ -89,13 +89,13 @@ for headline in headlines:
 for new in news:
     setUp(new,'biasa')
 
-for new_famous in news_famous:
-    setUp(new_famous,'popular')
-
 for new_story in news_stories:
     setUp(new_story,'biasa')
 
-print(json.dumps(listTribun))
+for new_famous in news_famous:
+    setUp(new_famous,'popular')
+
+# print(json.dumps(listTribun))
 
 # items = {'Author' : list_author ,'Judul Berita' : list_title, 'Date' : list_date, "Link" : list_link, "Content" : list_content}
 # df = pd.DataFrame(items)

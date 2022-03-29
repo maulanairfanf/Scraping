@@ -4,7 +4,6 @@ import requests
 import pandas as pd
 import json
 
-from setuptools import setup
 
 
 url = "https://www.detik.com/"
@@ -186,7 +185,7 @@ for headline in headlines:
 for new in news:
     setUp(new, 'i-link')
 
-print(json.dumps(listDetik))
+# print(json.dumps(listDetik))
 
 # items = {'Author' : list_author ,'Judul Berita' : list_title, 'Date' : list_date, "Link" : list_link, "Content" : list_content}
 # df = pd.DataFrame(items)

@@ -86,7 +86,7 @@ def kerangkaLiputan(sub_soup, link,category):
     if(category == "popular") :
         listLiputan.append({'title' : title.strip(),'author ' : author.strip(), 'date' : configureDate(date).strip(), 'category' : 'popular','link' : link, 'content' : content,'website' : 'tribun.com'}) 
     else:
-        listLiputan.append({'title' : title.strip(),'author ' : author.strip(), 'date' : configureDate(date).strip(), 'biasa' : 'popular','link' : link, 'content' : content,'website' : 'tribun.com'}) 
+        listLiputan.append({'title' : title.strip(),'author ' : author.strip(), 'date' : configureDate(date).strip(), 'category' : 'biasa','link' : link, 'content' : content,'website' : 'tribun.com'}) 
 
 
 def setUp(new, category):
@@ -115,7 +115,7 @@ for new in news:
 for new_famous in news_famous:
     setUp(new_famous, 'popular')
 
-print(json.dumps(listLiputan))
+# print(json.dumps(listLiputan))
 
 # items = {'Author' : list_author ,'Judul Berita' : list_title, 'Date' : list_date, "Link" : list_link, "Content" : list_content}
 # df = pd.DataFrame(items)
