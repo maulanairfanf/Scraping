@@ -22,7 +22,7 @@ def configureDate(day):
 
 
 def kerangkaLiputan(sub_soup, link,category):
-    # print("link : ", link)
+    print("link : ", link)
     if (sub_soup.find(
             'h1', class_="read-page--header--title entry-title")):
         title = sub_soup.find(
@@ -83,10 +83,20 @@ def kerangkaLiputan(sub_soup, link,category):
     else:
         content = "Kerangka belum dikenali"
 
-    if(category == "popular") :
-        listLiputan.append({'title' : title.strip(),'author' : author.strip(), 'date' : configureDate(date).strip(), 'category' : 'popular','link' : link, 'content' : content,'website' : 'liputan6.com'}) 
-    else:
-        listLiputan.append({'title' : title.strip(),'author' : author.strip(), 'date' : configureDate(date).strip(), 'category' : 'biasa','link' : link, 'content' : content,'website' : 'liputan6.com'}) 
+    listItem = []
+    listItem.append(title.strip())
+    listItem.append(configureDate(date).strip())
+    listItem.append(author.strip())
+    listItem.append(link.strip())
+    listItem.append(category)
+    listItem.append("liputan.com")
+    items.append(listItem)
+
+    # if(category == "popular") :
+    #     listLiputan.append({'title' : title.strip(),'date' : configureDate(date).strip(), 'author' : author.strip(), 'link' : link ,'category' : 'popular','website' : 'liputan6.com'}) 
+    # else:
+    #     listLiputan.append({'title' : title.strip(),'date' : configureDate(date).strip(), 'author' : author.strip(), 'link' : link ,'category' : 'popular','website' : 'liputan6.com'}) 
+    
 
 
 def setUp(new, category):
@@ -99,12 +109,12 @@ def setUp(new, category):
     soup_new = BeautifulSoup(html_link_new, 'lxml')
     kerangkaLiputan(soup_new,link_new,category)
 
-listLiputan = []
+items = []
 
 link_main = main_news['href']
 html_link_main = requests.get(link_main).text
 soup_main = BeautifulSoup(html_link_main, 'lxml')
-kerangkaLiputan(soup_main, link_main,category)
+kerangkaLiputan(soup_main, link_main,'biasa')
 
 for headline in headlines:
     setUp(headline, 'biasa')
@@ -116,8 +126,7 @@ for new_famous in news_famous:
     setUp(new_famous, 'popular')
 
 # print(json.dumps(listLiputan))
+listLiputan = pd.DataFrame(items,columns=['title','date','author','link','category','website'])
 
-# items = {'Author' : list_author ,'Judul Berita' : list_title, 'Date' : list_date, "Link" : list_link, "Content" : list_content}
-# df = pd.DataFrame(items)
-# df.to_csv("liputan.csv")
+
 

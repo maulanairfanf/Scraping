@@ -52,7 +52,7 @@ def decomposeNav(contents):
 
 
 def kerangkaDetik(sub_soup, link, category):
-    # print("Link : ", link)
+    print("Link : ", link)
     # title
     if(sub_soup.find('h1', class_="detail__title")):
         title = sub_soup.find('h1', class_="detail__title").text
@@ -150,11 +150,20 @@ def kerangkaDetik(sub_soup, link, category):
         content = sub_soup.find('div', class_="newstag newstag2").text
     else:
         content = "Kerangka belum dikenali"
+    
+    listItem = []
+    listItem.append(title.strip())
+    listItem.append(date.strip())
+    listItem.append(author.strip())
+    listItem.append(link.strip())
+    listItem.append(category)
+    listItem.append("detik.com")
+    items.append(listItem)
 
-    if(category == "popular") :
-        listDetik.append({'title' : title.strip(),'author' : author.strip(), 'date' : configureDate(date).strip(), 'category' : 'popular','link' : link, 'content' : content,'website' : 'detik.com'}) 
-    else:
-        listDetik.append({'title' : title.strip(),'author' : author.strip(), 'date' : configureDate(date).strip(), 'category' : 'biasa','link' : link, 'content' : content,'website' : 'detik.com'}) 
+    # if(category == "popular") :
+    #     listDetik.append({'title' : title.strip(),'author' : author.strip(), 'date' : configureDate(date).strip(), 'category' : 'popular','link' : link,'website' : 'detik.com'}) 
+    # else:
+    #     listDetik.append({'title' : title.strip(),'author' : author.strip(), 'date' : configureDate(date).strip(), 'category' : 'biasa','link' : link,'website' : 'detik.com'}) 
 
 
 def setUp(new,category):
@@ -169,7 +178,7 @@ def setUp(new,category):
     soup_new = BeautifulSoup(html_link_new, 'lxml')
     kerangkaDetik(soup_new, link_new,category)
 
-listDetik = []
+items = []
 
 link_famous = link_new_famous
 html_link_famous = requests.get(link_famous).text
@@ -185,8 +194,4 @@ for headline in headlines:
 for new in news:
     setUp(new, 'i-link')
 
-# print(json.dumps(listDetik))
-
-# items = {'Author' : list_author ,'Judul Berita' : list_title, 'Date' : list_date, "Link" : list_link, "Content" : list_content}
-# df = pd.DataFrame(items)
-# df.to_csv("detik.csv")
+listDetik = pd.DataFrame(items,columns=['title','date','author','link','category','website'])

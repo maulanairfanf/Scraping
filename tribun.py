@@ -21,7 +21,7 @@ def configureDate(day):
 
 
 def rules(sub_soup, link, category):
-    # print("link : ", link)
+    print("link : ", link)
 
     # title
     if (sub_soup.find('h1', class_="f50 black2 f400 crimson")):
@@ -68,10 +68,19 @@ def rules(sub_soup, link, category):
     else:
         content = "Kerangka belum dikenali"
         
-    if(category == "popular") :
-        listTribun.append({'title' : title.strip(),'author' : author.strip(), 'date' : configureDate(date).strip(), 'category' : 'popular','link' : link, 'content' : content,'website' : 'tribun.com'}) 
-    else:
-        listTribun.append({'title' : title.strip(),'author' : author.strip(), 'date' : configureDate(date).strip(), 'category' : 'biasa','link' : link, 'content' : content,'website' : 'tribun.com'}) 
+    listItem = []
+    listItem.append(title.strip())
+    listItem.append(configureDate(date).strip())
+    listItem.append(author.strip())
+    listItem.append(link.strip())
+    listItem.append(category)
+    listItem.append("tribun.com")
+    items.append(listItem)
+
+    # if(category == "popular") :
+    #     listTribun.append({'title' : title.strip(),'author' : author.strip(), 'date' : configureDate(date).strip(), 'category' : 'popular','link' : link, 'website' : 'tribun.com'}) 
+    # else:
+    #     listTribun.append({'title' : title.strip(),'author' : author.strip(), 'date' : configureDate(date).strip(), 'category' : 'biasa','link' : link, 'website' : 'tribun.com'}) 
 
 
 def setUp(new,category):
@@ -80,8 +89,7 @@ def setUp(new,category):
     soup_new = BeautifulSoup(html_link_new, 'lxml')
     rules(soup_new, link_new,category)
 
-listTribun = []
-
+items = []
 
 for headline in headlines:
     setUp(headline,'biasa')
@@ -95,8 +103,4 @@ for new_story in news_stories:
 for new_famous in news_famous:
     setUp(new_famous,'popular')
 
-# print(json.dumps(listTribun))
-
-# items = {'Author' : list_author ,'Judul Berita' : list_title, 'Date' : list_date, "Link" : list_link, "Content" : list_content}
-# df = pd.DataFrame(items)
-# df.to_csv("tribun.csv")
+listTribun = pd.DataFrame(items,columns=['title','date','author','link','category','website'])
