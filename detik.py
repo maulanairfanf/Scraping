@@ -152,9 +152,9 @@ def kerangkaDetik(sub_soup, link, category):
         content = "Kerangka belum dikenali"
 
     if(category == "popular") :
-        listDetik.append({'title' : title.strip(),'author ' : author.strip(), 'date' : configureDate(date).strip(), 'category' : 'popular','link' : link, 'content' : content,'website' : 'tribun.com'}) 
+        listDetik.append({'title' : title.strip(),'author' : author.strip(), 'date' : configureDate(date).strip(), 'category' : 'popular','link' : link, 'content' : content,'website' : 'detik.com'}) 
     else:
-        listDetik.append({'title' : title.strip(),'author ' : author.strip(), 'date' : configureDate(date).strip(), 'category' : 'biasa','link' : link, 'content' : content,'website' : 'tribun.com'}) 
+        listDetik.append({'title' : title.strip(),'author' : author.strip(), 'date' : configureDate(date).strip(), 'category' : 'biasa','link' : link, 'content' : content,'website' : 'detik.com'}) 
 
 
 def setUp(new,category):

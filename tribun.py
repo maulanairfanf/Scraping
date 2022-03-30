@@ -69,9 +69,9 @@ def rules(sub_soup, link, category):
         content = "Kerangka belum dikenali"
         
     if(category == "popular") :
-        listTribun.append({'title' : title.strip(),'author ' : author.strip(), 'date' : configureDate(date).strip(), 'category' : 'popular','link' : link, 'content' : content,'website' : 'tribun.com'}) 
+        listTribun.append({'title' : title.strip(),'author' : author.strip(), 'date' : configureDate(date).strip(), 'category' : 'popular','link' : link, 'content' : content,'website' : 'tribun.com'}) 
     else:
-        listTribun.append({'title' : title.strip(),'author ' : author.strip(), 'date' : configureDate(date).strip(), 'category' : 'biasa','link' : link, 'content' : content,'website' : 'tribun.com'}) 
+        listTribun.append({'title' : title.strip(),'author' : author.strip(), 'date' : configureDate(date).strip(), 'category' : 'biasa','link' : link, 'content' : content,'website' : 'tribun.com'}) 
 
 
 def setUp(new,category):

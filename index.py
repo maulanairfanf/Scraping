@@ -9,7 +9,9 @@ listBerita.extend(listLiputan)
 listBerita.extend(listDetik)
 listBerita.extend(listTribun)
 
-print(json.dumps(listBerita))
+
+with open("Berita.json",'w') as f :
+    f.write(json.dumps(listBerita))
 
 
 

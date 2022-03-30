@@ -84,9 +84,9 @@ def kerangkaLiputan(sub_soup, link,category):
         content = "Kerangka belum dikenali"
 
     if(category == "popular") :
-        listLiputan.append({'title' : title.strip(),'author ' : author.strip(), 'date' : configureDate(date).strip(), 'category' : 'popular','link' : link, 'content' : content,'website' : 'tribun.com'}) 
+        listLiputan.append({'title' : title.strip(),'author' : author.strip(), 'date' : configureDate(date).strip(), 'category' : 'popular','link' : link, 'content' : content,'website' : 'liputan6.com'}) 
     else:
-        listLiputan.append({'title' : title.strip(),'author ' : author.strip(), 'date' : configureDate(date).strip(), 'category' : 'biasa','link' : link, 'content' : content,'website' : 'tribun.com'}) 
+        listLiputan.append({'title' : title.strip(),'author' : author.strip(), 'date' : configureDate(date).strip(), 'category' : 'biasa','link' : link, 'content' : content,'website' : 'liputan6.com'}) 
 
 
 def setUp(new, category):
