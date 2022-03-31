@@ -45,7 +45,7 @@ def decomposeNav(contents):
 
 
 def kerangkaDetik(sub_soup, link, category):
-    print("Link : ", link)
+    # print("Link : ", link)
     # title
     if(sub_soup.find('h1', class_="detail__title")):
         title = sub_soup.find('h1', class_="detail__title").text
@@ -151,6 +151,7 @@ def kerangkaDetik(sub_soup, link, category):
     listItem.append(link.strip())
     listItem.append(category)
     listItem.append("detik")
+    listItem.append(content.strip())
     items.append(listItem)
 
     # if(category == "popular") :
@@ -187,4 +188,5 @@ for headline in headlines:
 for new in news:
     setUp(new, 'i-link')
 
-listDetik = pd.DataFrame(items,columns=['title','date','author','link','category','website'])
+listDetik = pd.DataFrame(items,columns=['title','date','author','link','category','website','content'])
+print(listDetik)

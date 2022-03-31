@@ -16,7 +16,7 @@ news_stories = soup.find_all('a', class_="fbo2 f14 al txt-oev-3")
 
 
 def rules(sub_soup, link, category):
-    print("link : ", link)
+    # print("link : ", link)
 
     # title
     if (sub_soup.find('h1', class_="f50 black2 f400 crimson")):
@@ -70,9 +70,8 @@ def rules(sub_soup, link, category):
     listItem.append(link.strip())
     listItem.append(category)
     listItem.append("tribun.com")
+    listItem.append(content.strip())
     items.append(listItem)
-
-    print(items)
 
     # if(category == "popular") :
     #     listTribun.append({'title' : title.strip(),'author' : author.strip(), 'date' : configureDate(date).strip(), 'category' : 'popular','link' : link, 'website' : 'tribun.com'}) 
@@ -100,4 +99,5 @@ for new_story in news_stories:
 for new_famous in news_famous:
     setUp(new_famous,'popular')
 
-listTribun = pd.DataFrame(items,columns=['title','date','author','link','category','website'])
+listTribun = pd.DataFrame(items,columns=['title','date','author','link','category','website','content'])
+print(listTribun)

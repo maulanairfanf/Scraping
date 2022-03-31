@@ -16,7 +16,7 @@ news_famous = soup.find_all('h5', class_="article-snippet--numbered__title")
 
 
 def kerangkaLiputan(sub_soup, link,category):
-    print("link : ", link)
+    # print("link : ", link)
     if (sub_soup.find(
             'h1', class_="read-page--header--title entry-title")):
         title = sub_soup.find(
@@ -84,6 +84,7 @@ def kerangkaLiputan(sub_soup, link,category):
     listItem.append(link.strip())
     listItem.append(category)
     listItem.append("liputan")
+    listItem.append(content.strip())
     items.append(listItem)
 
     # if(category == "popular") :
@@ -118,7 +119,6 @@ for new in news:
 for new_famous in news_famous:
     setUp(new_famous, 'popular')
 
-listLiputan = pd.DataFrame(items,columns=['title','date','author','link','category','website'])
-
-
+listLiputan = pd.DataFrame(items,columns=['title','date','author','link','category','website','content'])
+print(listLiputan)
 
