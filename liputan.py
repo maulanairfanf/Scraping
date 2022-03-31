@@ -79,7 +79,7 @@ def kerangkaLiputan(sub_soup, link,category):
 
     listItem = []
     listItem.append(title.strip())
-    listItem.append(configureDate(date).strip())
+    listItem.append(configureDate(date,'liputan').strip())
     listItem.append(author.strip())
     listItem.append(link.strip())
     listItem.append(category)
