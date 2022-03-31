@@ -1,8 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
-import csv
 import pandas as pd
-import json
+from help import configureDate
 
 url = "https://www.tribunnews.com/"
 headers = {
@@ -14,10 +13,6 @@ headlines = soup.find_all('a', class_="ovh tsa2 pos_rel hladvthumb")
 news = soup.find_all('a', class_="f20 ln24 fbo txt-oev-2")
 news_famous = soup.find_all('a', class_="fbo2 f15 txt-oev-3")
 news_stories = soup.find_all('a', class_="fbo2 f14 al txt-oev-3")
-
-
-def configureDate(day):
-    return day.split(', ')[-1]
 
 
 def rules(sub_soup, link, category):
@@ -70,12 +65,14 @@ def rules(sub_soup, link, category):
         
     listItem = []
     listItem.append(title.strip())
-    listItem.append(configureDate(date).strip())
+    listItem.append(configureDate(date,'tribun').strip())
     listItem.append(author.strip())
     listItem.append(link.strip())
     listItem.append(category)
     listItem.append("tribun.com")
     items.append(listItem)
+
+    print(items)
 
     # if(category == "popular") :
     #     listTribun.append({'title' : title.strip(),'author' : author.strip(), 'date' : configureDate(date).strip(), 'category' : 'popular','link' : link, 'website' : 'tribun.com'}) 

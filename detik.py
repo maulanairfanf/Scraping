@@ -1,10 +1,7 @@
-import re
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
-import json
-
-
+from help import configureDate
 
 url = "https://www.detik.com/"
 html_text = requests.get(
@@ -16,10 +13,6 @@ news = soup.find_all(['div', 'article'], class_="article_inview")
 link_new_famous = soup.find('div', class_="box cb-mostpop").find('a',class_="btn btn--default color-orange-light-1 btn--md")['href']
 # news_c = soup.find_all('div', class_="article_inview")
 # news_d = soup.find_all('article', class_="article_inview")
-
-
-def configureDate(day):
-    return day.split(', ')[-1].replace("Jan", "Januari").replace("Feb", "Februari").replace("Mar", "Maret").replace("Apr", "April").replace("Jun", "Juni").replace("Jul", "Juli").replace("Agu", "Agustus").replace("Sep", "Sepptember").replace("Nov", "November").replace("Des", "Desember")
 
 
 def configureAuthor(site):
@@ -153,17 +146,17 @@ def kerangkaDetik(sub_soup, link, category):
     
     listItem = []
     listItem.append(title.strip())
-    listItem.append(date.strip())
+    listItem.append(configureDate(date,'detik').strip())
     listItem.append(author.strip())
     listItem.append(link.strip())
     listItem.append(category)
-    listItem.append("detik.com")
+    listItem.append("detik")
     items.append(listItem)
 
     # if(category == "popular") :
-    #     listDetik.append({'title' : title.strip(),'author' : author.strip(), 'date' : configureDate(date).strip(), 'category' : 'popular','link' : link,'website' : 'detik.com'}) 
+    #     listDetik.append({'title' : title.strip(),'author' : author.strip(), 'date' : configureDate(date).strip(), 'category' : 'popular','link' : link,'website' : 'detik'}) 
     # else:
-    #     listDetik.append({'title' : title.strip(),'author' : author.strip(), 'date' : configureDate(date).strip(), 'category' : 'biasa','link' : link,'website' : 'detik.com'}) 
+    #     listDetik.append({'title' : title.strip(),'author' : author.strip(), 'date' : configureDate(date).strip(), 'category' : 'biasa','link' : link,'website' : 'detik'}) 
 
 
 def setUp(new,category):

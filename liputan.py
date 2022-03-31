@@ -1,9 +1,7 @@
-from re import sub
-from unicodedata import category
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
-import json
+from help import configureDate
 
 url = "https://www.liputan6.com/"
 html_text = requests.get(
@@ -15,10 +13,6 @@ headlines = soup.find_all(
 news = soup.find_all(
     'a', class_="ui--a articles--iridescent-list--text-item__title-link")
 news_famous = soup.find_all('h5', class_="article-snippet--numbered__title")
-
-
-def configureDate(day):
-    return day.replace("Jan", "Januari").replace("Feb", "Februari").replace("Mar", "Maret").replace("Apr", "April").replace("Jun", "Juni").replace("Jul", "Juli").replace("Agu", "Agustus").replace("Sep", "Sepptember").replace("Nov", "November").replace("Des", "Desember").replace(',', '')
 
 
 def kerangkaLiputan(sub_soup, link,category):
@@ -89,14 +83,13 @@ def kerangkaLiputan(sub_soup, link,category):
     listItem.append(author.strip())
     listItem.append(link.strip())
     listItem.append(category)
-    listItem.append("liputan.com")
+    listItem.append("liputan")
     items.append(listItem)
 
     # if(category == "popular") :
     #     listLiputan.append({'title' : title.strip(),'date' : configureDate(date).strip(), 'author' : author.strip(), 'link' : link ,'category' : 'popular','website' : 'liputan6.com'}) 
     # else:
     #     listLiputan.append({'title' : title.strip(),'date' : configureDate(date).strip(), 'author' : author.strip(), 'link' : link ,'category' : 'popular','website' : 'liputan6.com'}) 
-    
 
 
 def setUp(new, category):
@@ -125,7 +118,6 @@ for new in news:
 for new_famous in news_famous:
     setUp(new_famous, 'popular')
 
-# print(json.dumps(listLiputan))
 listLiputan = pd.DataFrame(items,columns=['title','date','author','link','category','website'])
 
 
