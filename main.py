@@ -3,7 +3,7 @@ import pandas as pd
 from liputan import listLiputan
 from tribun import listTribun
 from detik import listDetik
-
+from help import currentDateTime
 # print(listLiputan)
 # print(listTribun)
 # print(listDetik)
@@ -15,7 +15,7 @@ from detik import listDetik
 arrBerita = [listLiputan,listTribun,listDetik]
 listBerita = pd.concat(arrBerita)
 listBerita.reset_index(drop=True, inplace=True)
-listBerita.to_csv("Berita.csv",index=False)
+listBerita.to_csv(f"Data/Berita{currentDateTime}.csv",index=False)
 
 engine = create_engine('mysql+pymysql://root@127.0.0.1:3306/webscraping') 
 
