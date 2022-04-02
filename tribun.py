@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
-from help import configureDate
+from help import configureDate,currentDateTime
 
 url = "https://www.tribunnews.com/"
 headers = {
@@ -100,4 +100,6 @@ for new_famous in news_famous:
     setUp(new_famous,'popular')
 
 listTribun = pd.DataFrame(items,columns=['title','date','author','link','category','website','content'])
+listTribun.to_csv(f'data/Tribun({currentDateTime}).csv',index=False)
+
 print(listTribun)

@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
-from help import configureDate
+from help import configureDate,currentDateTime
 
 url = "https://www.liputan6.com/"
 html_text = requests.get(
@@ -120,5 +120,7 @@ for new_famous in news_famous:
     setUp(new_famous, 'popular')
 
 listLiputan = pd.DataFrame(items,columns=['title','date','author','link','category','website','content'])
+listLiputan.to_csv(f'data/Liputan({currentDateTime}).csv',index=False)
+
 print(listLiputan)
 
