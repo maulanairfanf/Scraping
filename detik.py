@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
-from help import configureDate
+from help import configureDate,currentDateTime
 
 url = "https://www.detik.com/"
 html_text = requests.get(
@@ -188,14 +188,14 @@ famous = soup_main.find_all('article', class_="list-content__item")
 for many_famous in famous :
     setUp(many_famous,'popular')
 
-for headline in headlines:
-    setUp(headline, 'headline')
+# for headline in headlines:
+#     setUp(headline, 'headline')
 
-for new in news:
-    setUp(new, 'i-link')
+# for new in news:
+#     setUp(new, 'i-link')
 
 
-# listDetik = pd.DataFrame(items,columns=['title','date','author','link','category','website','content'])
-# listDetik.to_csv("Detik.csv",index=False)
+listDetik = pd.DataFrame(items,columns=['title','date','author','link','category','website','content'])
+listDetik.to_csv(f'data/Detik({currentDateTime}).csv',index=False)
 
 # print(listDetik)
