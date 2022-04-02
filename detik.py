@@ -69,6 +69,12 @@ def kerangkaDetik(sub_soup, link, category):
         author = sub_soup.find('div', class_="ugc__block__name").a.text
     elif (sub_soup.find('span', class_="author")):  # detikHealth #wolipop
         author = sub_soup.find('span', class_="author").text
+    elif(sub_soup.find_all('div',class_="column full body_text")):
+        find_name = sub_soup.find_all('div',class_="column full body_test")
+        for find in find_name :
+            if("Penulis" in find.text):
+                split_author = find.text.split('editor')[0]
+                author = split_author.split(":")[1]
     else:
         author = "Kerangka belum dikenali"
 
@@ -188,5 +194,8 @@ for headline in headlines:
 for new in news:
     setUp(new, 'i-link')
 
-listDetik = pd.DataFrame(items,columns=['title','date','author','link','category','website','content'])
-print(listDetik)
+
+# listDetik = pd.DataFrame(items,columns=['title','date','author','link','category','website','content'])
+# listDetik.to_csv("Detik.csv",index=False)
+
+# print(listDetik)
