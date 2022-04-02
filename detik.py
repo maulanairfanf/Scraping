@@ -188,11 +188,11 @@ famous = soup_main.find_all('article', class_="list-content__item")
 for many_famous in famous :
     setUp(many_famous,'popular')
 
-# for headline in headlines:
-#     setUp(headline, 'headline')
+for headline in headlines:
+    setUp(headline, 'headline')
 
-# for new in news:
-#     setUp(new, 'i-link')
+for new in news:
+    setUp(new, 'i-link')
 
 
 listDetik = pd.DataFrame(items,columns=['title','date','author','link','category','website','content'])
