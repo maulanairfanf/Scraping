@@ -198,4 +198,4 @@ for new in news:
 listDetik = pd.DataFrame(items,columns=['title','date','author','link','category','website','content'])
 listDetik.to_csv(f'data/Detik({currentDateTime}).csv',index=False)
 
-# print(listDetik)
+print(listDetik)
