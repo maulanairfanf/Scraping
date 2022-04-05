@@ -196,6 +196,7 @@ for new in news:
 
 
 listDetik = pd.DataFrame(items,columns=['title','date','author','link','category','website','content'])
+listDetik.drop_duplicates(subset="link",keep='last',inplace=True)
 listDetik.to_csv(f'data/Detik({currentDateTime}).csv',index=False)
 
 print(listDetik)

@@ -83,7 +83,7 @@ def kerangkaLiputan(sub_soup, link,category):
     listItem.append(author.strip())
     listItem.append(link.strip())
     listItem.append(category)
-    listItem.append("liputan")
+    listItem.append("liputan6")
     listItem.append(content.strip())
     items.append(listItem)
 
@@ -113,14 +113,15 @@ kerangkaLiputan(soup_main, link_main,'biasa')
 for headline in headlines:
     setUp(headline, 'biasa')
 
-# for new in news:
-#     setUp(new, 'biasa')
+for new in news:
+    setUp(new, 'biasa')
 
-# for new_famous in news_famous:
-#     setUp(new_famous, 'popular')
+for new_famous in news_famous:
+    setUp(new_famous, 'popular')
 
 listLiputan = pd.DataFrame(items,columns=['title','date','author','link','category','website','content'])
+listLiputan.drop_duplicates(subset="link",keep='last',inplace=True)
 listLiputan.to_csv(f'data/Liputan({currentDateTime}).csv',index=False)
 
-print(listLiputan)
+# print(listLiputan)
 

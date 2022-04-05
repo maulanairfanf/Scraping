@@ -69,7 +69,7 @@ def rules(sub_soup, link, category):
     listItem.append(author.strip())
     listItem.append(link.strip())
     listItem.append(category)
-    listItem.append("tribun.com")
+    listItem.append("tribunnews")
     listItem.append(content.strip())
     items.append(listItem)
 
@@ -100,6 +100,7 @@ for new_famous in news_famous:
     setUp(new_famous,'popular')
 
 listTribun = pd.DataFrame(items,columns=['title','date','author','link','category','website','content'])
+listTribun.drop_duplicates(subset="link",keep='last',inplace=True)
 listTribun.to_csv(f'data/Tribun({currentDateTime}).csv',index=False)
 
 print(listTribun)
