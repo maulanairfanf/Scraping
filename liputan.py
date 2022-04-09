@@ -123,5 +123,5 @@ listLiputan = pd.DataFrame(items,columns=['title','date','author','link','catego
 listLiputan.drop_duplicates(subset="link",keep='last',inplace=True)
 listLiputan.to_csv(f'data/Liputan({currentDateTime}).csv',index=False)
 
-# print(listLiputan)
+print(listLiputan)
 

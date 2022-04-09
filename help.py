@@ -19,6 +19,9 @@ def configureDate(day,website):
     if(website == 'tribun' or website == 'detik') :
         remove_views = change_month.split(', ')[-1]
         get_date = remove_views.rpartition(year)[0]
+        if(website == 'tribun') :
+            if(int(get_date.split(' ')[0]) < 10) :
+                get_date = "0" + get_date
         get_year = remove_views.rpartition(year)[1]
         date = get_date + get_year
     if(website == 'liputan') :
