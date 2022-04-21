@@ -160,12 +160,6 @@ def kerangkaDetik(sub_soup, link, category):
     listItem.append(content.strip())
     items.append(listItem)
 
-    # if(category == "popular") :
-    #     listDetik.append({'title' : title.strip(),'author' : author.strip(), 'date' : configureDate(date).strip(), 'category' : 'popular','link' : link,'website' : 'detik'}) 
-    # else:
-    #     listDetik.append({'title' : title.strip(),'author' : author.strip(), 'date' : configureDate(date).strip(), 'category' : 'biasa','link' : link,'website' : 'detik'}) 
-
-
 def setUp(new,category):
     if(category == "headline" or category =="popular"):
         if(category == 'headline') :
@@ -193,7 +187,6 @@ for headline in headlines:
 
 for new in news:
     setUp(new, 'i-link')
-
 
 listDetik = pd.DataFrame(items,columns=['title','date','author','link','category','website','content'])
 listDetik.drop_duplicates(subset="link",keep='last',inplace=True)

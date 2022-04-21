@@ -1,11 +1,11 @@
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
-from help import configureDate,currentDateTime
+from help import configureDate, currentDateTime
 
 url = "https://www.tribunnews.com/"
 headers = {
-    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36"}
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36 Edg/100.0.1185.44"}
 html_text = requests.get(
     url, headers=headers).text
 soup = BeautifulSoup(html_text, 'lxml')
@@ -33,10 +33,8 @@ def rules(sub_soup, link, category):
         date = "Kerangka belum dikenali"
 
     # author
-    if (sub_soup.find('div', id=["penulis", "editor"])):
-        author = sub_soup.find('div', id=["penulis", "editor"]).a.text
-    # elif (sub_soup.find('div', id="editor")):
-    #     author = sub_soup.findn('div', id="editor").a.text
+    if (sub_soup.find('div', id="penulis")):
+        author = sub_soup.find('div', id="penulis").a.text
     else:
         author = "Kerangka belum dikenali / Author tidak dipublikasikan"
 
@@ -62,10 +60,10 @@ def rules(sub_soup, link, category):
 
     else:
         content = "Kerangka belum dikenali"
-        
+
     listItem = []
     listItem.append(title.strip())
-    listItem.append(configureDate(date,'tribun').strip())
+    listItem.append(configureDate(date, 'tribun').strip())
     listItem.append(author.strip())
     listItem.append(link.strip())
     listItem.append(category)
@@ -73,34 +71,31 @@ def rules(sub_soup, link, category):
     listItem.append(content.strip())
     items.append(listItem)
 
-    # if(category == "popular") :
-    #     listTribun.append({'title' : title.strip(),'author' : author.strip(), 'date' : configureDate(date).strip(), 'category' : 'popular','link' : link, 'website' : 'tribun.com'}) 
-    # else:
-    #     listTribun.append({'title' : title.strip(),'author' : author.strip(), 'date' : configureDate(date).strip(), 'category' : 'biasa','link' : link, 'website' : 'tribun.com'}) 
 
-
-def setUp(new,category):
+def setUp(new, category):
     link_new = new['href']
     html_link_new = requests.get(link_new, headers=headers).text
     soup_new = BeautifulSoup(html_link_new, 'lxml')
-    rules(soup_new, link_new,category)
+    rules(soup_new, link_new, category)
+
 
 items = []
 
 for headline in headlines:
-    setUp(headline,'biasa')
+    setUp(headline, 'biasa')
 
 for new in news:
-    setUp(new,'biasa')
+    setUp(new, 'biasa')
 
 for new_story in news_stories:
-    setUp(new_story,'biasa')
+    setUp(new_story, 'biasa')
 
 for new_famous in news_famous:
-    setUp(new_famous,'popular')
+    setUp(new_famous, 'popular')
 
-listTribun = pd.DataFrame(items,columns=['title','date','author','link','category','website','content'])
-listTribun.drop_duplicates(subset="link",keep='last',inplace=True)
-listTribun.to_csv(f'data/Tribun({currentDateTime}).csv',index=False)
+listTribun = pd.DataFrame(items, columns=[
+                          'title', 'date', 'author', 'link', 'category', 'website', 'content'])
+listTribun.drop_duplicates(subset="link", keep='last', inplace=True)
+listTribun.to_csv(f'data/Tribun({currentDateTime}).csv', index=False)
 
 print(listTribun)

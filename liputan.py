@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
-from help import configureDate,currentDateTime
+from help import configureDate, currentDateTime
 
 url = "https://www.liputan6.com/"
 html_text = requests.get(
@@ -15,7 +15,7 @@ news = soup.find_all(
 news_famous = soup.find_all('h5', class_="article-snippet--numbered__title")
 
 
-def kerangkaLiputan(sub_soup, link,category):
+def kerangkaLiputan(sub_soup, link, category):
     # print("link : ", link)
     if (sub_soup.find(
             'h1', class_="read-page--header--title entry-title")):
@@ -79,7 +79,7 @@ def kerangkaLiputan(sub_soup, link,category):
 
     listItem = []
     listItem.append(title.strip())
-    listItem.append(configureDate(date,'liputan').strip())
+    listItem.append(configureDate(date, 'liputan').strip())
     listItem.append(author.strip())
     listItem.append(link.strip())
     listItem.append(category)
@@ -87,28 +87,23 @@ def kerangkaLiputan(sub_soup, link,category):
     listItem.append(content.strip())
     items.append(listItem)
 
-    # if(category == "popular") :
-    #     listLiputan.append({'title' : title.strip(),'date' : configureDate(date).strip(), 'author' : author.strip(), 'link' : link ,'category' : 'popular','website' : 'liputan6.com'}) 
-    # else:
-    #     listLiputan.append({'title' : title.strip(),'date' : configureDate(date).strip(), 'author' : author.strip(), 'link' : link ,'category' : 'popular','website' : 'liputan6.com'}) 
-
 
 def setUp(new, category):
     if(category == 'popular'):
         link_new = new.a['href']
     else:
         link_new = new['href']
-    
     html_link_new = requests.get(link_new).text
     soup_new = BeautifulSoup(html_link_new, 'lxml')
-    kerangkaLiputan(soup_new,link_new,category)
+    kerangkaLiputan(soup_new, link_new, category)
+
 
 items = []
 
 link_main = main_news['href']
 html_link_main = requests.get(link_main).text
 soup_main = BeautifulSoup(html_link_main, 'lxml')
-kerangkaLiputan(soup_main, link_main,'biasa')
+kerangkaLiputan(soup_main, link_main, 'biasa')
 
 for headline in headlines:
     setUp(headline, 'biasa')
@@ -119,9 +114,9 @@ for new in news:
 for new_famous in news_famous:
     setUp(new_famous, 'popular')
 
-listLiputan = pd.DataFrame(items,columns=['title','date','author','link','category','website','content'])
-listLiputan.drop_duplicates(subset="link",keep='last',inplace=True)
-listLiputan.to_csv(f'data/Liputan({currentDateTime}).csv',index=False)
+listLiputan = pd.DataFrame(items, columns=[
+                           'title', 'date', 'author', 'link', 'category', 'website', 'content'])
+listLiputan.drop_duplicates(subset="link", keep='last', inplace=True)
+listLiputan.to_csv(f'data/Liputan({currentDateTime}).csv', index=False)
 
 print(listLiputan)
-
