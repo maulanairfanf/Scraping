@@ -1,7 +1,10 @@
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
-from help import configureDate, currentDateTime
+from help import configureDate, currentDateTime, executeTime
+import time
+
+st = time.time()
 
 url = "https://www.liputan6.com/"
 html_text = requests.get(
@@ -117,6 +120,12 @@ for new_famous in news_famous:
 listLiputan = pd.DataFrame(items, columns=[
                            'title', 'date', 'author', 'link', 'category', 'website', 'content'])
 listLiputan.drop_duplicates(subset="link", keep='last', inplace=True)
-listLiputan.to_csv(f'data/Liputan({currentDateTime}).csv', index=False)
 
+et = time.time()
+elapsed_time_liputan = et - st
+
+listLiputan.to_csv(f'data/berita/Liputan({currentDateTime}).csv', index=False)
 print(listLiputan)
+
+print('Execution time Liputan6.com :', elapsed_time_liputan, 'seconds')
+executeTime(elapsed_time_liputan, "Liputan6.com")

@@ -1,7 +1,10 @@
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
-from help import configureDate,currentDateTime
+from help import configureDate, currentDateTime,executeTime
+import time
+
+st = time.time()
 
 url = "https://www.detik.com/"
 html_text = requests.get(
@@ -10,7 +13,8 @@ soup = BeautifulSoup(html_text, 'lxml')
 headlines = soup.find_all(
     'article', class_="list-content__item column")
 news = soup.find_all(['div', 'article'], class_="article_inview")
-link_new_famous = soup.find('div', class_="box cb-mostpop").find('a',class_="btn btn--default color-orange-light-1 btn--md")['href']
+link_new_famous = soup.find('div', class_="box cb-mostpop").find(
+    'a', class_="btn btn--default color-orange-light-1 btn--md")['href']
 # news_c = soup.find_all('div', class_="article_inview")
 # news_d = soup.find_all('article', class_="article_inview")
 
@@ -69,9 +73,9 @@ def kerangkaDetik(sub_soup, link, category):
         author = sub_soup.find('div', class_="ugc__block__name").a.text
     elif (sub_soup.find('span', class_="author")):  # detikHealth #wolipop
         author = sub_soup.find('span', class_="author").text
-    elif(sub_soup.find_all('div',class_="column full body_text")):
-        find_name = sub_soup.find_all('div',class_="column full body_test")
-        for find in find_name :
+    elif(sub_soup.find_all('div', class_="column full body_text")):
+        find_name = sub_soup.find_all('div', class_="column full body_test")
+        for find in find_name:
             if("Penulis" in find.text):
                 split_author = find.text.split('editor')[0]
                 author = split_author.split(":")[1]
@@ -149,10 +153,10 @@ def kerangkaDetik(sub_soup, link, category):
         content = sub_soup.find('div', class_="newstag newstag2").text
     else:
         content = "Kerangka belum dikenali"
-    
+
     listItem = []
     listItem.append(title.strip())
-    listItem.append(configureDate(date,'detik').strip())
+    listItem.append(configureDate(date, 'detik').strip())
     listItem.append(author.strip())
     listItem.append(link.strip())
     listItem.append(category)
@@ -160,17 +164,19 @@ def kerangkaDetik(sub_soup, link, category):
     listItem.append(content.strip())
     items.append(listItem)
 
-def setUp(new,category):
-    if(category == "headline" or category =="popular"):
-        if(category == 'headline') :
+
+def setUp(new, category):
+    if(category == "headline" or category == "popular"):
+        if(category == 'headline'):
             category = "biasa"
         link_new = new.a['href']
-    else :
+    else:
         link_new = new['i-link']
         category = 'biasa'
     html_link_new = requests.get(link_new).text
     soup_new = BeautifulSoup(html_link_new, 'lxml')
-    kerangkaDetik(soup_new, link_new,category)
+    kerangkaDetik(soup_new, link_new, category)
+
 
 items = []
 
@@ -179,8 +185,8 @@ html_link_famous = requests.get(link_famous).text
 soup_main = BeautifulSoup(html_link_famous, 'lxml')
 famous = soup_main.find_all('article', class_="list-content__item")
 
-for many_famous in famous :
-    setUp(many_famous,'popular')
+for many_famous in famous:
+    setUp(many_famous, 'popular')
 
 for headline in headlines:
     setUp(headline, 'headline')
@@ -188,8 +194,15 @@ for headline in headlines:
 for new in news:
     setUp(new, 'i-link')
 
-listDetik = pd.DataFrame(items,columns=['title','date','author','link','category','website','content'])
-listDetik.drop_duplicates(subset="link",keep='last',inplace=True)
-listDetik.to_csv(f'data/Detik({currentDateTime}).csv',index=False)
+listDetik = pd.DataFrame(items, columns=[
+                         'title', 'date', 'author', 'link', 'category', 'website', 'content'])
+listDetik.drop_duplicates(subset="link", keep='last', inplace=True)
 
+et = time.time()
+elapsed_time_detik = et - st
+
+listDetik.to_csv(f'data/berita/Detik({currentDateTime}).csv', index=False)
 print(listDetik)
+
+print('Execution time Detik.com:', elapsed_time_detik, 'seconds')
+executeTime(elapsed_time_detik, "Detik.com")

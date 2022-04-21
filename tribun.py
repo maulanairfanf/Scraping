@@ -1,7 +1,10 @@
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
-from help import configureDate, currentDateTime
+from help import configureDate, currentDateTime, executeTime
+import time
+
+st = time.time()
 
 url = "https://www.tribunnews.com/"
 headers = {
@@ -52,12 +55,10 @@ def rules(sub_soup, link, category):
                 'div', class_="_popIn_recommend_art_title")
             for recommend in recommends:
                 recommend.decompose()
-
         arr_content = []
         for data_content in content.find_all("p"):
             arr_content.append(data_content.text)
         content = "".join(arr_content)
-
     else:
         content = "Kerangka belum dikenali"
 
@@ -96,6 +97,12 @@ for new_famous in news_famous:
 listTribun = pd.DataFrame(items, columns=[
                           'title', 'date', 'author', 'link', 'category', 'website', 'content'])
 listTribun.drop_duplicates(subset="link", keep='last', inplace=True)
-listTribun.to_csv(f'data/Tribun({currentDateTime}).csv', index=False)
 
+et = time.time()
+elapsed_time_tribun = et - st
+
+listTribun.to_csv(f'data/berita/Tribun({currentDateTime}).csv', index=False)
 print(listTribun)
+
+print('Execution time Tribunnews.com :', elapsed_time_tribun, 'seconds')
+executeTime(elapsed_time_tribun, "Tribunnews.com")
