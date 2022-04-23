@@ -123,9 +123,11 @@ listLiputan.drop_duplicates(subset="link", keep='last', inplace=True)
 
 et = time.time()
 elapsed_time_liputan = et - st
+row_liputan = listLiputan.shape[0]
+column_liputan = listLiputan.shape[1]
 
 listLiputan.to_csv(f'data/berita/Liputan({currentDateTime}).csv', index=False)
 print(listLiputan)
 
 print('Execution time Liputan6.com :', elapsed_time_liputan, 'seconds')
-executeTime(elapsed_time_liputan, "Liputan6.com")
+executeTime(elapsed_time_liputan,row_liputan, column_liputan, "Liputan6.com")

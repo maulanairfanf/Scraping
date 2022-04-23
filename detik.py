@@ -49,7 +49,7 @@ def decomposeNav(contents):
 
 
 def kerangkaDetik(sub_soup, link, category):
-    print("Link : ", link)
+    # print("Link : ", link)
     # title
     if(sub_soup.find('h1', class_="detail__title")):
         title = sub_soup.find('h1', class_="detail__title").text
@@ -76,7 +76,6 @@ def kerangkaDetik(sub_soup, link, category):
         find_name = sub_soup.find_all('div', class_="column full body_text")
         for find in find_name:
             if("Penulis" in find.text):
-                print(find.text)
                 split_author = find.text.split('Editor')[0]
                 author = split_author.split(":")[1]
     else:
@@ -185,14 +184,14 @@ html_link_famous = requests.get(link_famous).text
 soup_main = BeautifulSoup(html_link_famous, 'lxml')
 famous = soup_main.find_all('article', class_="list-content__item")
 
-# for many_famous in famous:
-#     setUp(many_famous, 'popular')
+for many_famous in famous:
+    setUp(many_famous, 'popular')
 
 for headline in headlines:
     setUp(headline, 'headline')
 
-# for new in news:
-#     setUp(new, 'i-link')
+for new in news:
+    setUp(new, 'i-link')
 
 listDetik = pd.DataFrame(items, columns=[
                          'title', 'date', 'author', 'link', 'category', 'website', 'content'])
@@ -200,9 +199,11 @@ listDetik.drop_duplicates(subset="link", keep='last', inplace=True)
 
 et = time.time()
 elapsed_time_detik = et - st
+row_detik = listDetik.shape[0]
+column_detik = listDetik.shape[1]
 
 listDetik.to_csv(f'data/berita/Detik({currentDateTime}).csv', index=False)
 print(listDetik)
 
 print('Execution time Detik.com:', elapsed_time_detik, 'seconds')
-executeTime(elapsed_time_detik, "Detik.com")
+executeTime(elapsed_time_detik, row_detik, column_detik, "Detik.com")

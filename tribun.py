@@ -100,9 +100,11 @@ listTribun.drop_duplicates(subset="link", keep='last', inplace=True)
 
 et = time.time()
 elapsed_time_tribun = et - st
+row_tribun = listTribun.shape[0]
+column_tribun = listTribun.shape[1]
 
 listTribun.to_csv(f'data/berita/Tribun({currentDateTime}).csv', index=False)
 print(listTribun)
 
 print('Execution time Tribunnews.com :', elapsed_time_tribun, 'seconds')
-executeTime(elapsed_time_tribun, "Tribunnews.com")
+executeTime(elapsed_time_tribun, row_tribun,column_tribun, "Tribunnews.com")

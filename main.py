@@ -1,13 +1,16 @@
 import psycopg2
 import pandas as pd
-from liputan import listLiputan, elapsed_time_liputan
-from tribun import listTribun, elapsed_time_tribun
-from detik import listDetik, elapsed_time_detik
+from liputan import listLiputan, elapsed_time_liputan, row_liputan, column_liputan
+from tribun import listTribun, elapsed_time_tribun, row_tribun, column_tribun
+from detik import listDetik, elapsed_time_detik, row_detik, column_detik
 from help import currentDateTime, executeTime
 
 totalTime = elapsed_time_liputan + elapsed_time_tribun + elapsed_time_detik
+totalRow = row_liputan + row_tribun + row_detik
+totaColumn = (column_liputan + column_tribun + column_detik) / 3
 print('Execution time total :', totalTime, 'seconds')
-executeTime(totalTime, "Total Waktu Scraping Ketiga Website")
+executeTime(totalTime, totalRow, totaColumn,
+            "Total Waktu Scraping Ketiga Website")
 
 arrBerita = [listLiputan, listTribun, listDetik]
 listBerita = pd.concat(arrBerita)
