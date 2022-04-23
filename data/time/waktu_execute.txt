@@ -1,1 +1,4 @@
 Tanggal : 23-04-2022 | Waktu Scraping Liputan6.com : 16.740665197372437 detik | Banyak row : 77 | Banyak column : 7 
+Tanggal : 23-04-2022 | Waktu Scraping Tribunnews.com : 48.90639638900757 detik | Banyak row : 52 | Banyak column : 7 
+Tanggal : 23-04-2022 | Waktu Scraping Detik.com : 40.988754987716675 detik | Banyak row : 48 | Banyak column : 7 
+Tanggal : 23-04-2022 | Waktu Scraping Total Waktu Scraping Ketiga Website : 106.63581657409668 detik | Banyak row : 177 | Banyak column : 7.0 
