@@ -1,4 +1,8 @@
-Tanggal : 21-04-2022 | Waktu Scraping Liputan6.com : 20.344784259796143 
-Tanggal : 21-04-2022 | Waktu Scraping Tribunnews.com : 24.87870192527771 
-Tanggal : 21-04-2022 | Waktu Scraping Detik.com : 29.91704559326172 
-Tanggal : 21-04-2022 | Waktu Scraping Total Waktu Scraping Ketiga Website : 75.14053177833557 
+Tanggal : 21-04-2022 | Waktu Scraping Liputan6.com : 20.344784259796143 
+
+Tanggal : 21-04-2022 | Waktu Scraping Tribunnews.com : 24.87870192527771 
+
+Tanggal : 21-04-2022 | Waktu Scraping Detik.com : 29.91704559326172 
+
+Tanggal : 21-04-2022 | Waktu Scraping Total Waktu Scraping Ketiga Website : 75.14053177833557 
+

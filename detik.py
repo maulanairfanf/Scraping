@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
-from help import configureDate, currentDateTime,executeTime
+from help import configureDate, currentDateTime, executeTime
 import time
 
 st = time.time()
@@ -49,7 +49,7 @@ def decomposeNav(contents):
 
 
 def kerangkaDetik(sub_soup, link, category):
-    # print("Link : ", link)
+    print("Link : ", link)
     # title
     if(sub_soup.find('h1', class_="detail__title")):
         title = sub_soup.find('h1', class_="detail__title").text
@@ -63,7 +63,6 @@ def kerangkaDetik(sub_soup, link, category):
     # Author
     # detikOto #sepakbola #detiknews #detikFinance #detikInet
     if (sub_soup.find('div', class_="detail__author")):
-        # sub_soup.find('span', class_="detail__label").decompose()
         author = sub_soup.find(
             'div', class_="detail__author").text
     elif (sub_soup.find('div', class_="color-gray-light-1 font-xs")):  # 20Detik
@@ -74,10 +73,11 @@ def kerangkaDetik(sub_soup, link, category):
     elif (sub_soup.find('span', class_="author")):  # detikHealth #wolipop
         author = sub_soup.find('span', class_="author").text
     elif(sub_soup.find_all('div', class_="column full body_text")):
-        find_name = sub_soup.find_all('div', class_="column full body_test")
+        find_name = sub_soup.find_all('div', class_="column full body_text")
         for find in find_name:
             if("Penulis" in find.text):
-                split_author = find.text.split('editor')[0]
+                print(find.text)
+                split_author = find.text.split('Editor')[0]
                 author = split_author.split(":")[1]
     else:
         author = "Kerangka belum dikenali"
@@ -185,14 +185,14 @@ html_link_famous = requests.get(link_famous).text
 soup_main = BeautifulSoup(html_link_famous, 'lxml')
 famous = soup_main.find_all('article', class_="list-content__item")
 
-for many_famous in famous:
-    setUp(many_famous, 'popular')
+# for many_famous in famous:
+#     setUp(many_famous, 'popular')
 
 for headline in headlines:
     setUp(headline, 'headline')
 
-for new in news:
-    setUp(new, 'i-link')
+# for new in news:
+#     setUp(new, 'i-link')
 
 listDetik = pd.DataFrame(items, columns=[
                          'title', 'date', 'author', 'link', 'category', 'website', 'content'])
