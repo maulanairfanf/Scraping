@@ -126,7 +126,7 @@ elapsed_time_liputan = et - st
 row_liputan = listLiputan.shape[0]
 column_liputan = listLiputan.shape[1]
 
-listLiputan.to_csv(f'data/berita/Liputan({currentDateTime}).csv', index=False)
+# listLiputan.to_excel(f'data/berita/Liputan({currentDateTime}).xlsx', index=False)
 print(listLiputan)
 
 print('Execution time Liputan6.com :', elapsed_time_liputan, 'seconds')

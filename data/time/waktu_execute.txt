@@ -14,3 +14,11 @@ Tanggal : 24-04-2022 | Waktu Scraping Detik.com : 28.170058012008667 detik | Ban
 
 Tanggal : 24-04-2022 | Waktu Scraping Total Waktu Scraping Ketiga Website : 73.99303722381592 detik | Banyak row : 187 | Banyak column : 7.0 
 
+Tanggal : 24-04-2022 | Waktu Scraping Tribunnews.com : 31.236830234527588 detik | Banyak row : 58 | Banyak column : 7 
+Tanggal : 24-04-2022 | Waktu Scraping Tribunnews.com : 38.39403986930847 detik | Banyak row : 58 | Banyak column : 7 
+Tanggal : 24-04-2022 | Waktu Scraping Tribunnews.com : 36.43806052207947 detik | Banyak row : 58 | Banyak column : 7 
+Tanggal : 24-04-2022 | Waktu Scraping Tribunnews.com : 32.43950605392456 detik | Banyak row : 58 | Banyak column : 7 
+Tanggal : 24-04-2022 | Waktu Scraping Tribunnews.com : 31.30599617958069 detik | Banyak row : 58 | Banyak column : 7 
+Tanggal : 24-04-2022 | Waktu Scraping Tribunnews.com : 3.1462395191192627 detik | Banyak row : 5 | Banyak column : 7 
+Tanggal : 24-04-2022 | Waktu Scraping Tribunnews.com : 2.4493353366851807 detik | Banyak row : 5 | Banyak column : 7 
+Tanggal : 24-04-2022 | Waktu Scraping Tribunnews.com : 4.742023706436157 detik | Banyak row : 5 | Banyak column : 7 

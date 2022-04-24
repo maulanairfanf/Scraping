@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
+from sqlalchemy import false
 from help import configureDate, currentDateTime, executeTime
 import time
 
@@ -38,8 +39,10 @@ def rules(sub_soup, link, category):
     # author
     if (sub_soup.find('div', id="penulis")):
         author = sub_soup.find('div', id="penulis").a.text
+    elif("Penulis" not in sub_soup):
+        author = "Author tidak dipublikasikan"
     else:
-        author = "Kerangka belum dikenali / Author tidak dipublikasikan"
+        author = "Kerangka belum dikenali"
 
     # content
     if(sub_soup.find('div', class_="side-article txt-article multi-fontsize")):
@@ -85,14 +88,14 @@ items = []
 for headline in headlines:
     setUp(headline, 'biasa')
 
-for new in news:
-    setUp(new, 'biasa')
+# for new in news:
+#     setUp(new, 'biasa')
 
-for new_story in news_stories:
-    setUp(new_story, 'biasa')
+# for new_story in news_stories:
+#     setUp(new_story, 'biasa')
 
-for new_famous in news_famous:
-    setUp(new_famous, 'popular')
+# for new_famous in news_famous:
+#     setUp(new_famous, 'popular')
 
 listTribun = pd.DataFrame(items, columns=[
                           'title', 'date', 'author', 'link', 'category', 'website', 'content'])
@@ -103,8 +106,8 @@ elapsed_time_tribun = et - st
 row_tribun = listTribun.shape[0]
 column_tribun = listTribun.shape[1]
 
-listTribun.to_csv(f'data/berita/Tribun({currentDateTime}).csv', index=False)
+listTribun.to_excel(f'data/berita/Tribun({currentDateTime}).xlsx', index=False)
 print(listTribun)
 
 print('Execution time Tribunnews.com :', elapsed_time_tribun, 'seconds')
-executeTime(elapsed_time_tribun, row_tribun,column_tribun, "Tribunnews.com")
+executeTime(elapsed_time_tribun, row_tribun, column_tribun, "Tribunnews.com")

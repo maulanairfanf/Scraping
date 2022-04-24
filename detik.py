@@ -202,7 +202,7 @@ elapsed_time_detik = et - st
 row_detik = listDetik.shape[0]
 column_detik = listDetik.shape[1]
 
-listDetik.to_csv(f'data/berita/Detik({currentDateTime}).csv', index=False)
+# listDetik.to_excel(f'data/berita/Detik({currentDateTime}).xlsx', index=False)
 print(listDetik)
 
 print('Execution time Detik.com:', elapsed_time_detik, 'seconds')

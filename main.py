@@ -16,7 +16,7 @@ arrBerita = [listLiputan, listTribun, listDetik]
 listBerita = pd.concat(arrBerita)
 listBerita.reset_index(drop=True, inplace=True)
 listBerita.drop_duplicates(subset=["link"])
-# listBerita.to_csv(f"Data/Berita({currentDateTime}).csv", index=False)
+# listBerita.to_excel(f"data/berita/Berita({currentDateTime}).xlsx", index=False)
 
 # conn = psycopg2.connect(
 #     database="d93p694gn91dn4", user='lcwsaujkplbtoa', password='f222a0c158038fbc55d1b815143ab41e42f3ae27f9d8d999ef7c944e4490cda6', host='ec2-34-197-84-74.compute-1.amazonaws.com', port='5432'
