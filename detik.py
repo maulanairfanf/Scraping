@@ -150,6 +150,8 @@ def kerangkaDetik(sub_soup, link, category):
             'div', class_="detail_text group detail_text2").text
     elif(sub_soup.find('div', class_="newstag newstag2")):
         content = sub_soup.find('div', class_="newstag newstag2").text
+    elif(sub_soup.find('div', class_="read__content full mt20")):
+        content = sub_soup.find('div', class_="read__content full mt20").text
     else:
         content = "Kerangka belum dikenali"
 
