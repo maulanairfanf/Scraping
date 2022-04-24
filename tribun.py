@@ -88,14 +88,14 @@ items = []
 for headline in headlines:
     setUp(headline, 'biasa')
 
-# for new in news:
-#     setUp(new, 'biasa')
+for new in news:
+    setUp(new, 'biasa')
 
-# for new_story in news_stories:
-#     setUp(new_story, 'biasa')
+for new_story in news_stories:
+    setUp(new_story, 'biasa')
 
-# for new_famous in news_famous:
-#     setUp(new_famous, 'popular')
+for new_famous in news_famous:
+    setUp(new_famous, 'popular')
 
 listTribun = pd.DataFrame(items, columns=[
                           'title', 'date', 'author', 'link', 'category', 'website', 'content'])
