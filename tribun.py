@@ -106,7 +106,7 @@ elapsed_time_tribun = et - st
 row_tribun = listTribun.shape[0]
 column_tribun = listTribun.shape[1]
 
-listTribun.to_excel(f'data/berita/Tribun({currentDateTime}).xlsx', index=False)
+# listTribun.to_excel(f'data/berita/Tribun({currentDateTime}).xlsx', index=False)
 print(listTribun)
 
 print('Execution time Tribunnews.com :', elapsed_time_tribun, 'seconds')
