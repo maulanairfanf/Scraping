@@ -13,13 +13,15 @@ headers = {
 html_text = requests.get(
     url, headers=headers).text
 soup = BeautifulSoup(html_text, 'lxml')
+for data in soup(['style', 'script']):
+    data.decompose()
 headlines = soup.find_all('a', class_="ovh tsa2 pos_rel hladvthumb")
 news = soup.find_all('a', class_="f20 ln24 fbo txt-oev-2")
 news_famous = soup.find_all('a', class_="fbo2 f15 txt-oev-3")
 news_stories = soup.find_all('a', class_="fbo2 f14 al txt-oev-3")
 
 
-def rules(sub_soup, link, category):
+def kerangkaTribun(sub_soup, link, category):
     # print("link : ", link)
 
     # title

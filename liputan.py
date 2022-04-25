@@ -10,6 +10,8 @@ url = "https://www.liputan6.com/"
 html_text = requests.get(
     url).text
 soup = BeautifulSoup(html_text, 'lxml')
+for data in soup(['style', 'script']):
+    data.decompose()
 main_news = soup.find('a', class_="ui--a headline--main__title-link")
 headlines = soup.find_all(
     'a', class_="ui--a headline--bottom-slider__link")
