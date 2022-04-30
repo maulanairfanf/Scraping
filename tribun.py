@@ -6,7 +6,6 @@ from help import configureDate, currentDateTime, executeTime
 import time
 
 st = time.time()
-
 url = "https://www.tribunnews.com/"
 headers = {
     "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36 Edg/100.0.1185.44"}
@@ -51,15 +50,13 @@ def kerangkaTribun(sub_soup, link, category):
         content = sub_soup.find(
             'div', class_="side-article txt-article multi-fontsize")
         if(content.find('p', class_="baca")):
-            reads = content.find_all('p', class_="baca")
-            for read in reads:
-                read.decompose()
+            for i in range(len(content.find_all('p', class_="baca"))):
+                content.find('p', class_="baca").decompose()
 
         if(content.find('div', class_="_popIn_recommend_art_title")):
-            recommends = content.find_all(
-                'div', class_="_popIn_recommend_art_title")
-            for recommend in recommends:
-                recommend.decompose()
+            for j in range(len(content.find_all('div', class_="_popIn_recommend_art_title"))):
+                content.find(
+                    'div', class_="_popIn_recommend_art_title").decompose()
         arr_content = []
         for data_content in content.find_all("p"):
             arr_content.append(data_content.text)

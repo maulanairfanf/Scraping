@@ -23,10 +23,11 @@ def configureDate(day, website):
 
 
 currentDateTime = datetime.datetime.now().date().strftime("%d-%m-%Y")
+currentDateTimeExecute = datetime.datetime.now().strftime("%d-%m-%Y %H:%M:%S")
 
 
 def executeTime(time, row, column, website):
     f = open("data/time/waktu_execute.txt", "a+")
     f.write(
-        f"Tanggal : {currentDateTime} | Waktu Scraping {website} : {time} detik | Banyak row : {row} | Banyak column : {column} \r\n")
+        f"Tanggal : {currentDateTimeExecute} | Waktu Scraping {website} : {time} detik | Banyak row : {row} | Banyak column : {column} \r\n")
     f.close()

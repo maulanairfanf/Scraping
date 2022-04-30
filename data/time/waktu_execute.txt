@@ -1,0 +1,405 @@
+Tanggal : 25-04-2022 20:41:09 | Waktu Scraping Liputan6.com : 56.604419469833374 detik | Banyak row : 84 | Banyak column : 7 
+Tanggal : 25-04-2022 20:41:09 | Waktu Scraping Tribunnews.com : 5.138314247131348 detik | Banyak row : 52 | Banyak column : 7 
+Tanggal : 25-04-2022 20:41:09 | Waktu Scraping Detik.com : 101.22533893585205 detik | Banyak row : 46 | Banyak column : 7 
+Tanggal : 25-04-2022 20:41:09 | Waktu Scraping Total Waktu Scraping Ketiga Website : 162.96807265281677 detik | Banyak row : 182 | Banyak column : 7.0 
+Tanggal : 25-04-2022 21:41:10 | Waktu Scraping Liputan6.com : 56.068495750427246 detik | Banyak row : 84 | Banyak column : 7 
+Tanggal : 25-04-2022 21:41:10 | Waktu Scraping Tribunnews.com : 5.392768144607544 detik | Banyak row : 52 | Banyak column : 7 
+Tanggal : 25-04-2022 21:41:10 | Waktu Scraping Detik.com : 103.13008666038513 detik | Banyak row : 42 | Banyak column : 7 
+Tanggal : 25-04-2022 21:41:10 | Waktu Scraping Total Waktu Scraping Ketiga Website : 164.59135055541992 detik | Banyak row : 178 | Banyak column : 7.0 
+Tanggal : 25-04-2022 22:41:12 | Waktu Scraping Liputan6.com : 61.75189232826233 detik | Banyak row : 84 | Banyak column : 7 
+Tanggal : 25-04-2022 22:41:12 | Waktu Scraping Tribunnews.com : 5.207215070724487 detik | Banyak row : 51 | Banyak column : 7 
+Tanggal : 25-04-2022 22:41:12 | Waktu Scraping Detik.com : 107.0391411781311 detik | Banyak row : 45 | Banyak column : 7 
+Tanggal : 25-04-2022 22:41:12 | Waktu Scraping Total Waktu Scraping Ketiga Website : 173.99824857711792 detik | Banyak row : 180 | Banyak column : 7.0 
+Tanggal : 25-04-2022 23:41:13 | Waktu Scraping Liputan6.com : 56.968576431274414 detik | Banyak row : 82 | Banyak column : 7 
+Tanggal : 25-04-2022 23:41:13 | Waktu Scraping Tribunnews.com : 5.062346458435059 detik | Banyak row : 50 | Banyak column : 7 
+Tanggal : 25-04-2022 23:41:13 | Waktu Scraping Detik.com : 107.45409941673279 detik | Banyak row : 42 | Banyak column : 7 
+Tanggal : 25-04-2022 23:41:13 | Waktu Scraping Total Waktu Scraping Ketiga Website : 169.48502230644226 detik | Banyak row : 174 | Banyak column : 7.0 
+Tanggal : 26-04-2022 00:41:15 | Waktu Scraping Liputan6.com : 57.67060828208923 detik | Banyak row : 83 | Banyak column : 7 
+Tanggal : 26-04-2022 00:41:15 | Waktu Scraping Tribunnews.com : 5.079657554626465 detik | Banyak row : 56 | Banyak column : 7 
+Tanggal : 26-04-2022 00:41:15 | Waktu Scraping Detik.com : 112.47320699691772 detik | Banyak row : 43 | Banyak column : 7 
+Tanggal : 26-04-2022 00:41:15 | Waktu Scraping Total Waktu Scraping Ketiga Website : 175.22347283363342 detik | Banyak row : 182 | Banyak column : 7.0 
+Tanggal : 26-04-2022 01:41:16 | Waktu Scraping Liputan6.com : 57.258766889572144 detik | Banyak row : 82 | Banyak column : 7 
+Tanggal : 26-04-2022 01:41:16 | Waktu Scraping Tribunnews.com : 5.336671829223633 detik | Banyak row : 56 | Banyak column : 7 
+Tanggal : 26-04-2022 01:41:16 | Waktu Scraping Detik.com : 106.72727298736572 detik | Banyak row : 47 | Banyak column : 7 
+Tanggal : 26-04-2022 01:41:16 | Waktu Scraping Total Waktu Scraping Ketiga Website : 169.3227117061615 detik | Banyak row : 185 | Banyak column : 7.0 
+Tanggal : 26-04-2022 02:41:18 | Waktu Scraping Liputan6.com : 57.67327404022217 detik | Banyak row : 83 | Banyak column : 7 
+Tanggal : 26-04-2022 02:41:18 | Waktu Scraping Tribunnews.com : 5.204517126083374 detik | Banyak row : 55 | Banyak column : 7 
+Tanggal : 26-04-2022 02:41:18 | Waktu Scraping Detik.com : 113.87083888053894 detik | Banyak row : 53 | Banyak column : 7 
+Tanggal : 26-04-2022 02:41:18 | Waktu Scraping Total Waktu Scraping Ketiga Website : 176.74863004684448 detik | Banyak row : 191 | Banyak column : 7.0 
+Tanggal : 26-04-2022 03:41:20 | Waktu Scraping Liputan6.com : 56.14643478393555 detik | Banyak row : 81 | Banyak column : 7 
+Tanggal : 26-04-2022 03:41:20 | Waktu Scraping Tribunnews.com : 4.950884580612183 detik | Banyak row : 59 | Banyak column : 7 
+Tanggal : 26-04-2022 03:41:20 | Waktu Scraping Detik.com : 107.59152579307556 detik | Banyak row : 48 | Banyak column : 7 
+Tanggal : 26-04-2022 03:41:20 | Waktu Scraping Total Waktu Scraping Ketiga Website : 168.6888451576233 detik | Banyak row : 188 | Banyak column : 7.0 
+Tanggal : 26-04-2022 04:41:21 | Waktu Scraping Liputan6.com : 56.0642945766449 detik | Banyak row : 81 | Banyak column : 7 
+Tanggal : 26-04-2022 04:41:21 | Waktu Scraping Tribunnews.com : 5.543941020965576 detik | Banyak row : 62 | Banyak column : 7 
+Tanggal : 26-04-2022 04:41:21 | Waktu Scraping Detik.com : 110.36436915397644 detik | Banyak row : 50 | Banyak column : 7 
+Tanggal : 26-04-2022 04:41:21 | Waktu Scraping Total Waktu Scraping Ketiga Website : 171.9726047515869 detik | Banyak row : 193 | Banyak column : 7.0 
+Tanggal : 26-04-2022 05:41:22 | Waktu Scraping Liputan6.com : 50.83694672584534 detik | Banyak row : 75 | Banyak column : 7 
+Tanggal : 26-04-2022 05:41:22 | Waktu Scraping Tribunnews.com : 7.337573766708374 detik | Banyak row : 56 | Banyak column : 7 
+Tanggal : 26-04-2022 05:41:22 | Waktu Scraping Detik.com : 115.08733248710632 detik | Banyak row : 52 | Banyak column : 7 
+Tanggal : 26-04-2022 05:41:22 | Waktu Scraping Total Waktu Scraping Ketiga Website : 173.26185297966003 detik | Banyak row : 183 | Banyak column : 7.0 
+Tanggal : 26-04-2022 07:41:38 | Waktu Scraping Liputan6.com : 49.07321047782898 detik | Banyak row : 72 | Banyak column : 7 
+Tanggal : 26-04-2022 07:41:38 | Waktu Scraping Tribunnews.com : 6.861079692840576 detik | Banyak row : 61 | Banyak column : 7 
+Tanggal : 26-04-2022 07:41:38 | Waktu Scraping Detik.com : 112.4170594215393 detik | Banyak row : 51 | Banyak column : 7 
+Tanggal : 26-04-2022 07:41:38 | Waktu Scraping Total Waktu Scraping Ketiga Website : 168.35134959220886 detik | Banyak row : 184 | Banyak column : 7.0 
+Tanggal : 26-04-2022 08:41:45 | Waktu Scraping Liputan6.com : 51.745930671691895 detik | Banyak row : 77 | Banyak column : 7 
+Tanggal : 26-04-2022 08:41:45 | Waktu Scraping Tribunnews.com : 5.058050155639648 detik | Banyak row : 57 | Banyak column : 7 
+Tanggal : 26-04-2022 08:41:45 | Waktu Scraping Detik.com : 115.69283509254456 detik | Banyak row : 52 | Banyak column : 7 
+Tanggal : 26-04-2022 08:41:45 | Waktu Scraping Total Waktu Scraping Ketiga Website : 172.4968159198761 detik | Banyak row : 186 | Banyak column : 7.0 
+Tanggal : 26-04-2022 09:41:27 | Waktu Scraping Liputan6.com : 53.108410358428955 detik | Banyak row : 75 | Banyak column : 7 
+Tanggal : 26-04-2022 09:41:27 | Waktu Scraping Tribunnews.com : 5.191359281539917 detik | Banyak row : 61 | Banyak column : 7 
+Tanggal : 26-04-2022 09:41:27 | Waktu Scraping Detik.com : 107.03240513801575 detik | Banyak row : 51 | Banyak column : 7 
+Tanggal : 26-04-2022 09:41:27 | Waktu Scraping Total Waktu Scraping Ketiga Website : 165.33217477798462 detik | Banyak row : 187 | Banyak column : 7.0 
+Tanggal : 26-04-2022 10:41:27 | Waktu Scraping Liputan6.com : 54.08607029914856 detik | Banyak row : 80 | Banyak column : 7 
+Tanggal : 26-04-2022 10:41:27 | Waktu Scraping Tribunnews.com : 4.784050703048706 detik | Banyak row : 60 | Banyak column : 7 
+Tanggal : 26-04-2022 10:41:27 | Waktu Scraping Detik.com : 110.02946758270264 detik | Banyak row : 51 | Banyak column : 7 
+Tanggal : 26-04-2022 10:41:27 | Waktu Scraping Total Waktu Scraping Ketiga Website : 168.8995885848999 detik | Banyak row : 191 | Banyak column : 7.0 
+Tanggal : 26-04-2022 11:41:28 | Waktu Scraping Liputan6.com : 53.30276322364807 detik | Banyak row : 80 | Banyak column : 7 
+Tanggal : 26-04-2022 11:41:28 | Waktu Scraping Tribunnews.com : 4.888545989990234 detik | Banyak row : 58 | Banyak column : 7 
+Tanggal : 26-04-2022 11:41:28 | Waktu Scraping Detik.com : 109.62402439117432 detik | Banyak row : 50 | Banyak column : 7 
+Tanggal : 26-04-2022 11:41:28 | Waktu Scraping Total Waktu Scraping Ketiga Website : 167.81533360481262 detik | Banyak row : 188 | Banyak column : 7.0 
+Tanggal : 26-04-2022 12:41:29 | Waktu Scraping Liputan6.com : 56.00255560874939 detik | Banyak row : 80 | Banyak column : 7 
+Tanggal : 26-04-2022 12:41:29 | Waktu Scraping Tribunnews.com : 4.977235317230225 detik | Banyak row : 59 | Banyak column : 7 
+Tanggal : 26-04-2022 12:41:29 | Waktu Scraping Detik.com : 106.59262657165527 detik | Banyak row : 52 | Banyak column : 7 
+Tanggal : 26-04-2022 12:41:29 | Waktu Scraping Total Waktu Scraping Ketiga Website : 167.5724174976349 detik | Banyak row : 191 | Banyak column : 7.0 
+Tanggal : 26-04-2022 13:41:31 | Waktu Scraping Liputan6.com : 57.94447922706604 detik | Banyak row : 80 | Banyak column : 7 
+Tanggal : 26-04-2022 14:41:31 | Waktu Scraping Liputan6.com : 57.684876918792725 detik | Banyak row : 82 | Banyak column : 7 
+Tanggal : 26-04-2022 15:41:31 | Waktu Scraping Liputan6.com : 58.95766735076904 detik | Banyak row : 83 | Banyak column : 7 
+Tanggal : 26-04-2022 15:41:31 | Waktu Scraping Tribunnews.com : 5.6337385177612305 detik | Banyak row : 58 | Banyak column : 7 
+Tanggal : 26-04-2022 15:41:31 | Waktu Scraping Detik.com : 111.1970145702362 detik | Banyak row : 47 | Banyak column : 7 
+Tanggal : 26-04-2022 15:41:31 | Waktu Scraping Total Waktu Scraping Ketiga Website : 175.78842043876648 detik | Banyak row : 188 | Banyak column : 7.0 
+Tanggal : 26-04-2022 16:41:32 | Waktu Scraping Liputan6.com : 56.764599561691284 detik | Banyak row : 83 | Banyak column : 7 
+Tanggal : 26-04-2022 16:41:32 | Waktu Scraping Tribunnews.com : 5.020648956298828 detik | Banyak row : 58 | Banyak column : 7 
+Tanggal : 26-04-2022 16:41:32 | Waktu Scraping Detik.com : 110.72772669792175 detik | Banyak row : 46 | Banyak column : 7 
+Tanggal : 26-04-2022 16:41:32 | Waktu Scraping Total Waktu Scraping Ketiga Website : 172.51297521591187 detik | Banyak row : 187 | Banyak column : 7.0 
+
+===========================================================================================================================
+
+Tanggal : 26-04-2022 17:41:33 | Waktu Scraping Liputan6.com : 60.64752244949341 detik | Banyak row : 83 | Banyak column : 7 
+Tanggal : 26-04-2022 17:41:33 | Waktu Scraping Tribunnews.com : 5.185046195983887 detik | Banyak row : 57 | Banyak column : 7 
+Tanggal : 26-04-2022 17:41:33 | Waktu Scraping Detik.com : 102.95306253433228 detik | Banyak row : 43 | Banyak column : 7 
+Tanggal : 26-04-2022 17:41:33 | Waktu Scraping Total Waktu Scraping Ketiga Website : 168.78563117980957 detik | Banyak row : 183 | Banyak column : 7.0 
+Tanggal : 26-04-2022 18:41:35 | Waktu Scraping Liputan6.com : 65.19692993164062 detik | Banyak row : 83 | Banyak column : 7 
+Tanggal : 26-04-2022 18:41:35 | Waktu Scraping Tribunnews.com : 5.043942213058472 detik | Banyak row : 59 | Banyak column : 7 
+Tanggal : 26-04-2022 18:41:35 | Waktu Scraping Detik.com : 100.83639550209045 detik | Banyak row : 43 | Banyak column : 7 
+Tanggal : 26-04-2022 18:41:35 | Waktu Scraping Total Waktu Scraping Ketiga Website : 171.07726764678955 detik | Banyak row : 185 | Banyak column : 7.0 
+Tanggal : 26-04-2022 19:41:53 | Waktu Scraping Liputan6.com : 58.70136857032776 detik | Banyak row : 83 | Banyak column : 7 
+Tanggal : 26-04-2022 19:41:53 | Waktu Scraping Tribunnews.com : 5.204202651977539 detik | Banyak row : 60 | Banyak column : 7 
+Tanggal : 26-04-2022 19:41:53 | Waktu Scraping Detik.com : 99.66993713378906 detik | Banyak row : 44 | Banyak column : 7 
+Tanggal : 26-04-2022 19:41:53 | Waktu Scraping Total Waktu Scraping Ketiga Website : 163.57550835609436 detik | Banyak row : 187 | Banyak column : 7.0 
+Tanggal : 26-04-2022 20:41:38 | Waktu Scraping Liputan6.com : 56.55072736740112 detik | Banyak row : 84 | Banyak column : 7 
+Tanggal : 26-04-2022 20:41:38 | Waktu Scraping Tribunnews.com : 6.338207244873047 detik | Banyak row : 51 | Banyak column : 7 
+Tanggal : 26-04-2022 20:41:38 | Waktu Scraping Detik.com : 102.1911268234253 detik | Banyak row : 42 | Banyak column : 7 
+Tanggal : 26-04-2022 20:41:38 | Waktu Scraping Total Waktu Scraping Ketiga Website : 165.08006143569946 detik | Banyak row : 177 | Banyak column : 7.0 
+Tanggal : 26-04-2022 21:41:55 | Waktu Scraping Liputan6.com : 57.478126764297485 detik | Banyak row : 84 | Banyak column : 7 
+Tanggal : 26-04-2022 21:41:55 | Waktu Scraping Tribunnews.com : 5.319001197814941 detik | Banyak row : 51 | Banyak column : 7 
+Tanggal : 26-04-2022 21:41:55 | Waktu Scraping Detik.com : 105.106449842453 detik | Banyak row : 37 | Banyak column : 7 
+Tanggal : 26-04-2022 21:41:55 | Waktu Scraping Total Waktu Scraping Ketiga Website : 167.90357780456543 detik | Banyak row : 172 | Banyak column : 7.0 
+Tanggal : 26-04-2022 22:42:02 | Waktu Scraping Liputan6.com : 56.376824378967285 detik | Banyak row : 84 | Banyak column : 7 
+Tanggal : 26-04-2022 22:42:02 | Waktu Scraping Tribunnews.com : 7.879842042922974 detik | Banyak row : 43 | Banyak column : 7 
+Tanggal : 26-04-2022 22:42:02 | Waktu Scraping Detik.com : 102.33231711387634 detik | Banyak row : 42 | Banyak column : 7 
+Tanggal : 26-04-2022 22:42:02 | Waktu Scraping Total Waktu Scraping Ketiga Website : 166.5889835357666 detik | Banyak row : 169 | Banyak column : 7.0 
+Tanggal : 26-04-2022 23:41:42 | Waktu Scraping Liputan6.com : 61.501986026763916 detik | Banyak row : 84 | Banyak column : 7 
+Tanggal : 26-04-2022 23:41:42 | Waktu Scraping Tribunnews.com : 5.168346405029297 detik | Banyak row : 53 | Banyak column : 7 
+Tanggal : 26-04-2022 23:41:42 | Waktu Scraping Detik.com : 112.65344786643982 detik | Banyak row : 46 | Banyak column : 7 
+Tanggal : 26-04-2022 23:41:42 | Waktu Scraping Total Waktu Scraping Ketiga Website : 179.32378029823303 detik | Banyak row : 183 | Banyak column : 7.0 
+Tanggal : 27-04-2022 00:41:44 | Waktu Scraping Liputan6.com : 56.81460094451904 detik | Banyak row : 84 | Banyak column : 7 
+Tanggal : 27-04-2022 00:41:44 | Waktu Scraping Tribunnews.com : 5.50672459602356 detik | Banyak row : 53 | Banyak column : 7 
+Tanggal : 27-04-2022 00:41:44 | Waktu Scraping Detik.com : 105.45159268379211 detik | Banyak row : 44 | Banyak column : 7 
+Tanggal : 27-04-2022 00:41:44 | Waktu Scraping Total Waktu Scraping Ketiga Website : 167.77291822433472 detik | Banyak row : 181 | Banyak column : 7.0 
+Tanggal : 27-04-2022 01:41:45 | Waktu Scraping Liputan6.com : 57.43399119377136 detik | Banyak row : 81 | Banyak column : 7 
+Tanggal : 27-04-2022 01:41:45 | Waktu Scraping Tribunnews.com : 5.090568780899048 detik | Banyak row : 59 | Banyak column : 7 
+Tanggal : 27-04-2022 01:41:45 | Waktu Scraping Detik.com : 107.15398001670837 detik | Banyak row : 50 | Banyak column : 7 
+Tanggal : 27-04-2022 01:41:45 | Waktu Scraping Total Waktu Scraping Ketiga Website : 169.67853999137878 detik | Banyak row : 190 | Banyak column : 7.0 
+Tanggal : 27-04-2022 02:41:47 | Waktu Scraping Liputan6.com : 55.431437492370605 detik | Banyak row : 80 | Banyak column : 7 
+Tanggal : 27-04-2022 02:41:47 | Waktu Scraping Tribunnews.com : 4.9766833782196045 detik | Banyak row : 54 | Banyak column : 7 
+Tanggal : 27-04-2022 02:41:47 | Waktu Scraping Detik.com : 111.76087832450867 detik | Banyak row : 52 | Banyak column : 7 
+Tanggal : 27-04-2022 02:41:47 | Waktu Scraping Total Waktu Scraping Ketiga Website : 172.16899919509888 detik | Banyak row : 186 | Banyak column : 7.0 
+Tanggal : 27-04-2022 03:41:49 | Waktu Scraping Liputan6.com : 54.28167676925659 detik | Banyak row : 79 | Banyak column : 7 
+Tanggal : 27-04-2022 03:41:49 | Waktu Scraping Tribunnews.com : 5.682862281799316 detik | Banyak row : 55 | Banyak column : 7 
+Tanggal : 27-04-2022 03:41:49 | Waktu Scraping Detik.com : 106.80634832382202 detik | Banyak row : 52 | Banyak column : 7 
+Tanggal : 27-04-2022 03:41:49 | Waktu Scraping Total Waktu Scraping Ketiga Website : 166.77088737487793 detik | Banyak row : 186 | Banyak column : 7.0 
+Tanggal : 27-04-2022 04:41:51 | Waktu Scraping Liputan6.com : 57.73220348358154 detik | Banyak row : 79 | Banyak column : 7 
+Tanggal : 27-04-2022 04:41:51 | Waktu Scraping Tribunnews.com : 4.910706043243408 detik | Banyak row : 59 | Banyak column : 7 
+Tanggal : 27-04-2022 04:41:51 | Waktu Scraping Detik.com : 109.11591935157776 detik | Banyak row : 52 | Banyak column : 7 
+Tanggal : 27-04-2022 04:41:51 | Waktu Scraping Total Waktu Scraping Ketiga Website : 171.7588288784027 detik | Banyak row : 190 | Banyak column : 7.0 
+Tanggal : 27-04-2022 05:41:54 | Waktu Scraping Liputan6.com : 92.40053820610046 detik | Banyak row : 78 | Banyak column : 7 
+Tanggal : 27-04-2022 05:41:54 | Waktu Scraping Tribunnews.com : 6.724112510681152 detik | Banyak row : 58 | Banyak column : 7 
+Tanggal : 27-04-2022 05:41:54 | Waktu Scraping Detik.com : 106.48533248901367 detik | Banyak row : 53 | Banyak column : 7 
+Tanggal : 27-04-2022 05:41:54 | Waktu Scraping Total Waktu Scraping Ketiga Website : 205.6099832057953 detik | Banyak row : 189 | Banyak column : 7.0 
+Tanggal : 27-04-2022 06:41:54 | Waktu Scraping Liputan6.com : 55.29262733459473 detik | Banyak row : 75 | Banyak column : 7 
+Tanggal : 27-04-2022 06:41:54 | Waktu Scraping Tribunnews.com : 4.749884366989136 detik | Banyak row : 60 | Banyak column : 7 
+Tanggal : 27-04-2022 06:41:54 | Waktu Scraping Detik.com : 104.8610668182373 detik | Banyak row : 51 | Banyak column : 7 
+Tanggal : 27-04-2022 06:41:54 | Waktu Scraping Total Waktu Scraping Ketiga Website : 164.90357851982117 detik | Banyak row : 186 | Banyak column : 7.0 
+Tanggal : 27-04-2022 07:41:57 | Waktu Scraping Liputan6.com : 53.90582799911499 detik | Banyak row : 71 | Banyak column : 7 
+Tanggal : 27-04-2022 07:41:57 | Waktu Scraping Tribunnews.com : 5.032866477966309 detik | Banyak row : 58 | Banyak column : 7 
+Tanggal : 27-04-2022 07:41:57 | Waktu Scraping Detik.com : 112.80965566635132 detik | Banyak row : 52 | Banyak column : 7 
+Tanggal : 27-04-2022 07:41:57 | Waktu Scraping Total Waktu Scraping Ketiga Website : 171.74835014343262 detik | Banyak row : 181 | Banyak column : 7.0 
+Tanggal : 27-04-2022 08:41:58 | Waktu Scraping Liputan6.com : 47.22189235687256 detik | Banyak row : 70 | Banyak column : 7 
+Tanggal : 27-04-2022 08:41:58 | Waktu Scraping Tribunnews.com : 4.871917009353638 detik | Banyak row : 59 | Banyak column : 7 
+Tanggal : 27-04-2022 08:41:58 | Waktu Scraping Detik.com : 104.94485807418823 detik | Banyak row : 54 | Banyak column : 7 
+Tanggal : 27-04-2022 08:41:58 | Waktu Scraping Total Waktu Scraping Ketiga Website : 157.03866744041443 detik | Banyak row : 183 | Banyak column : 7.0 
+Tanggal : 27-04-2022 09:41:59 | Waktu Scraping Liputan6.com : 53.33946919441223 detik | Banyak row : 76 | Banyak column : 7 
+Tanggal : 27-04-2022 09:41:59 | Waktu Scraping Tribunnews.com : 5.611995697021484 detik | Banyak row : 54 | Banyak column : 7 
+Tanggal : 27-04-2022 09:41:59 | Waktu Scraping Detik.com : 104.75755524635315 detik | Banyak row : 51 | Banyak column : 7 
+Tanggal : 27-04-2022 09:41:59 | Waktu Scraping Total Waktu Scraping Ketiga Website : 163.70902013778687 detik | Banyak row : 181 | Banyak column : 7.0 
+Tanggal : 27-04-2022 10:42:02 | Waktu Scraping Liputan6.com : 54.14351201057434 detik | Banyak row : 80 | Banyak column : 7 
+Tanggal : 27-04-2022 10:42:02 | Waktu Scraping Tribunnews.com : 5.073397397994995 detik | Banyak row : 62 | Banyak column : 7 
+Tanggal : 27-04-2022 10:42:02 | Waktu Scraping Detik.com : 110.7724506855011 detik | Banyak row : 50 | Banyak column : 7 
+Tanggal : 27-04-2022 10:42:02 | Waktu Scraping Total Waktu Scraping Ketiga Website : 169.98936009407043 detik | Banyak row : 192 | Banyak column : 7.0 
+Tanggal : 27-04-2022 11:42:03 | Waktu Scraping Liputan6.com : 52.48955726623535 detik | Banyak row : 78 | Banyak column : 7 
+Tanggal : 27-04-2022 11:42:03 | Waktu Scraping Tribunnews.com : 4.944875001907349 detik | Banyak row : 61 | Banyak column : 7 
+Tanggal : 27-04-2022 11:42:03 | Waktu Scraping Detik.com : 107.87636160850525 detik | Banyak row : 52 | Banyak column : 7 
+Tanggal : 27-04-2022 11:42:03 | Waktu Scraping Total Waktu Scraping Ketiga Website : 165.31079387664795 detik | Banyak row : 191 | Banyak column : 7.0 
+Tanggal : 27-04-2022 12:42:06 | Waktu Scraping Liputan6.com : 56.97338795661926 detik | Banyak row : 81 | Banyak column : 7 
+Tanggal : 27-04-2022 12:42:06 | Waktu Scraping Tribunnews.com : 5.250178337097168 detik | Banyak row : 60 | Banyak column : 7 
+Tanggal : 27-04-2022 12:42:06 | Waktu Scraping Detik.com : 107.72684144973755 detik | Banyak row : 53 | Banyak column : 7 
+Tanggal : 27-04-2022 12:42:06 | Waktu Scraping Total Waktu Scraping Ketiga Website : 169.95040774345398 detik | Banyak row : 194 | Banyak column : 7.0 
+Tanggal : 27-04-2022 13:42:06 | Waktu Scraping Liputan6.com : 56.36307215690613 detik | Banyak row : 80 | Banyak column : 7 
+Tanggal : 27-04-2022 13:42:06 | Waktu Scraping Tribunnews.com : 5.073850631713867 detik | Banyak row : 62 | Banyak column : 7 
+Tanggal : 27-04-2022 13:42:06 | Waktu Scraping Detik.com : 105.22282266616821 detik | Banyak row : 50 | Banyak column : 7 
+Tanggal : 27-04-2022 13:42:06 | Waktu Scraping Total Waktu Scraping Ketiga Website : 166.6597454547882 detik | Banyak row : 192 | Banyak column : 7.0 
+Tanggal : 27-04-2022 14:42:08 | Waktu Scraping Liputan6.com : 86.17276167869568 detik | Banyak row : 81 | Banyak column : 7 
+Tanggal : 27-04-2022 14:42:08 | Waktu Scraping Tribunnews.com : 8.27073049545288 detik | Banyak row : 61 | Banyak column : 7 
+Tanggal : 27-04-2022 14:42:08 | Waktu Scraping Detik.com : 113.76846408843994 detik | Banyak row : 51 | Banyak column : 7 
+Tanggal : 27-04-2022 14:42:08 | Waktu Scraping Total Waktu Scraping Ketiga Website : 208.2119562625885 detik | Banyak row : 193 | Banyak column : 7.0 
+Tanggal : 27-04-2022 15:42:10 | Waktu Scraping Liputan6.com : 65.80068373680115 detik | Banyak row : 84 | Banyak column : 7 
+Tanggal : 27-04-2022 15:42:10 | Waktu Scraping Tribunnews.com : 5.512685060501099 detik | Banyak row : 55 | Banyak column : 7 
+Tanggal : 27-04-2022 15:42:10 | Waktu Scraping Detik.com : 107.0156455039978 detik | Banyak row : 49 | Banyak column : 7 
+Tanggal : 27-04-2022 15:42:10 | Waktu Scraping Total Waktu Scraping Ketiga Website : 178.32901430130005 detik | Banyak row : 188 | Banyak column : 7.0 
+Tanggal : 27-04-2022 16:42:11 | Waktu Scraping Liputan6.com : 59.75331163406372 detik | Banyak row : 84 | Banyak column : 7 
+Tanggal : 27-04-2022 16:42:11 | Waktu Scraping Tribunnews.com : 5.129265069961548 detik | Banyak row : 56 | Banyak column : 7 
+Tanggal : 27-04-2022 16:42:11 | Waktu Scraping Detik.com : 108.81393146514893 detik | Banyak row : 43 | Banyak column : 7 
+Tanggal : 27-04-2022 16:42:11 | Waktu Scraping Total Waktu Scraping Ketiga Website : 173.6965081691742 detik | Banyak row : 183 | Banyak column : 7.0 
+
+===========================================================================================================================
+
+Tanggal : 27-04-2022 17:42:14 | Waktu Scraping Liputan6.com : 95.11359024047852 detik | Banyak row : 84 | Banyak column : 7 
+Tanggal : 27-04-2022 17:42:14 | Waktu Scraping Tribunnews.com : 5.069854021072388 detik | Banyak row : 59 | Banyak column : 7 
+Tanggal : 27-04-2022 17:42:14 | Waktu Scraping Detik.com : 111.42982220649719 detik | Banyak row : 40 | Banyak column : 7 
+Tanggal : 27-04-2022 17:42:14 | Waktu Scraping Total Waktu Scraping Ketiga Website : 211.6132664680481 detik | Banyak row : 183 | Banyak column : 7.0 
+Tanggal : 27-04-2022 18:42:15 | Waktu Scraping Liputan6.com : 58.27759623527527 detik | Banyak row : 84 | Banyak column : 7 
+Tanggal : 27-04-2022 18:42:15 | Waktu Scraping Tribunnews.com : 5.765882730484009 detik | Banyak row : 61 | Banyak column : 7 
+Tanggal : 27-04-2022 18:42:15 | Waktu Scraping Detik.com : 111.83807063102722 detik | Banyak row : 42 | Banyak column : 7 
+Tanggal : 27-04-2022 18:42:15 | Waktu Scraping Total Waktu Scraping Ketiga Website : 175.8815495967865 detik | Banyak row : 187 | Banyak column : 7.0 
+Tanggal : 27-04-2022 19:42:16 | Waktu Scraping Liputan6.com : 59.39344263076782 detik | Banyak row : 84 | Banyak column : 7 
+Tanggal : 27-04-2022 19:42:16 | Waktu Scraping Tribunnews.com : 5.556791305541992 detik | Banyak row : 61 | Banyak column : 7 
+Tanggal : 27-04-2022 19:42:16 | Waktu Scraping Detik.com : 107.16976737976074 detik | Banyak row : 43 | Banyak column : 7 
+Tanggal : 27-04-2022 19:42:16 | Waktu Scraping Total Waktu Scraping Ketiga Website : 172.12000131607056 detik | Banyak row : 188 | Banyak column : 7.0 
+Tanggal : 27-04-2022 20:42:18 | Waktu Scraping Liputan6.com : 56.950987100601196 detik | Banyak row : 84 | Banyak column : 7 
+Tanggal : 27-04-2022 20:42:18 | Waktu Scraping Tribunnews.com : 5.815721035003662 detik | Banyak row : 52 | Banyak column : 7 
+Tanggal : 27-04-2022 20:42:18 | Waktu Scraping Detik.com : 107.69180703163147 detik | Banyak row : 47 | Banyak column : 7 
+Tanggal : 27-04-2022 20:42:18 | Waktu Scraping Total Waktu Scraping Ketiga Website : 170.45851516723633 detik | Banyak row : 183 | Banyak column : 7.0 
+Tanggal : 27-04-2022 21:42:20 | Waktu Scraping Liputan6.com : 61.28351974487305 detik | Banyak row : 84 | Banyak column : 7 
+Tanggal : 27-04-2022 21:42:20 | Waktu Scraping Tribunnews.com : 5.075005531311035 detik | Banyak row : 52 | Banyak column : 7 
+Tanggal : 27-04-2022 21:42:20 | Waktu Scraping Detik.com : 106.18116283416748 detik | Banyak row : 41 | Banyak column : 7 
+Tanggal : 27-04-2022 21:42:20 | Waktu Scraping Total Waktu Scraping Ketiga Website : 172.53968811035156 detik | Banyak row : 177 | Banyak column : 7.0 
+Tanggal : 27-04-2022 22:42:20 | Waktu Scraping Liputan6.com : 123.56394624710083 detik | Banyak row : 83 | Banyak column : 7 
+Tanggal : 27-04-2022 22:42:20 | Waktu Scraping Tribunnews.com : 5.187887668609619 detik | Banyak row : 48 | Banyak column : 7 
+Tanggal : 27-04-2022 22:42:20 | Waktu Scraping Detik.com : 100.59739398956299 detik | Banyak row : 42 | Banyak column : 7 
+Tanggal : 27-04-2022 22:42:20 | Waktu Scraping Total Waktu Scraping Ketiga Website : 229.34922790527344 detik | Banyak row : 173 | Banyak column : 7.0 
+Tanggal : 27-04-2022 23:42:21 | Waktu Scraping Liputan6.com : 62.9598913192749 detik | Banyak row : 83 | Banyak column : 7 
+Tanggal : 27-04-2022 23:42:21 | Waktu Scraping Tribunnews.com : 5.08939003944397 detik | Banyak row : 60 | Banyak column : 7 
+Tanggal : 27-04-2022 23:42:21 | Waktu Scraping Detik.com : 105.12121486663818 detik | Banyak row : 49 | Banyak column : 7 
+Tanggal : 27-04-2022 23:42:21 | Waktu Scraping Total Waktu Scraping Ketiga Website : 173.17049622535706 detik | Banyak row : 192 | Banyak column : 7.0 
+Tanggal : 28-04-2022 00:42:23 | Waktu Scraping Liputan6.com : 54.494425773620605 detik | Banyak row : 82 | Banyak column : 7 
+Tanggal : 28-04-2022 00:42:23 | Waktu Scraping Tribunnews.com : 5.436595916748047 detik | Banyak row : 57 | Banyak column : 7 
+Tanggal : 28-04-2022 00:42:23 | Waktu Scraping Detik.com : 99.52840256690979 detik | Banyak row : 46 | Banyak column : 7 
+Tanggal : 28-04-2022 00:42:23 | Waktu Scraping Total Waktu Scraping Ketiga Website : 159.45942425727844 detik | Banyak row : 185 | Banyak column : 7.0 
+Tanggal : 28-04-2022 01:42:25 | Waktu Scraping Liputan6.com : 56.73360323905945 detik | Banyak row : 83 | Banyak column : 7 
+Tanggal : 28-04-2022 01:42:25 | Waktu Scraping Tribunnews.com : 8.406238794326782 detik | Banyak row : 56 | Banyak column : 7 
+Tanggal : 28-04-2022 01:42:25 | Waktu Scraping Detik.com : 111.25979399681091 detik | Banyak row : 51 | Banyak column : 7 
+Tanggal : 28-04-2022 01:42:25 | Waktu Scraping Total Waktu Scraping Ketiga Website : 176.39963603019714 detik | Banyak row : 190 | Banyak column : 7.0 
+Tanggal : 28-04-2022 02:42:27 | Waktu Scraping Liputan6.com : 102.32755947113037 detik | Banyak row : 79 | Banyak column : 7 
+Tanggal : 28-04-2022 05:42:29 | Waktu Scraping Liputan6.com : 51.597901821136475 detik | Banyak row : 76 | Banyak column : 7 
+Tanggal : 28-04-2022 05:42:29 | Waktu Scraping Tribunnews.com : 4.9241838455200195 detik | Banyak row : 61 | Banyak column : 7 
+Tanggal : 28-04-2022 05:42:29 | Waktu Scraping Detik.com : 111.02333855628967 detik | Banyak row : 53 | Banyak column : 7 
+Tanggal : 28-04-2022 05:42:29 | Waktu Scraping Total Waktu Scraping Ketiga Website : 167.54542422294617 detik | Banyak row : 190 | Banyak column : 7.0 
+Tanggal : 28-04-2022 06:42:32 | Waktu Scraping Liputan6.com : 46.86386299133301 detik | Banyak row : 72 | Banyak column : 7 
+Tanggal : 28-04-2022 06:42:32 | Waktu Scraping Tribunnews.com : 5.042064428329468 detik | Banyak row : 61 | Banyak column : 7 
+Tanggal : 28-04-2022 06:42:32 | Waktu Scraping Detik.com : 103.84500885009766 detik | Banyak row : 50 | Banyak column : 7 
+Tanggal : 28-04-2022 06:42:32 | Waktu Scraping Total Waktu Scraping Ketiga Website : 155.75093626976013 detik | Banyak row : 183 | Banyak column : 7.0 
+Tanggal : 28-04-2022 07:42:34 | Waktu Scraping Liputan6.com : 49.222214698791504 detik | Banyak row : 72 | Banyak column : 7 
+Tanggal : 28-04-2022 07:42:34 | Waktu Scraping Tribunnews.com : 6.587143659591675 detik | Banyak row : 61 | Banyak column : 7 
+Tanggal : 28-04-2022 07:42:34 | Waktu Scraping Detik.com : 107.307697057724 detik | Banyak row : 51 | Banyak column : 7 
+Tanggal : 28-04-2022 07:42:34 | Waktu Scraping Total Waktu Scraping Ketiga Website : 163.11705541610718 detik | Banyak row : 184 | Banyak column : 7.0 
+Tanggal : 28-04-2022 08:42:35 | Waktu Scraping Liputan6.com : 48.476887702941895 detik | Banyak row : 74 | Banyak column : 7 
+Tanggal : 28-04-2022 08:42:35 | Waktu Scraping Tribunnews.com : 6.2927680015563965 detik | Banyak row : 58 | Banyak column : 7 
+Tanggal : 28-04-2022 08:42:35 | Waktu Scraping Detik.com : 105.9283754825592 detik | Banyak row : 54 | Banyak column : 7 
+Tanggal : 28-04-2022 08:42:35 | Waktu Scraping Total Waktu Scraping Ketiga Website : 160.6980311870575 detik | Banyak row : 186 | Banyak column : 7.0 
+Tanggal : 28-04-2022 09:42:38 | Waktu Scraping Liputan6.com : 55.06167817115784 detik | Banyak row : 82 | Banyak column : 7 
+Tanggal : 28-04-2022 09:42:38 | Waktu Scraping Tribunnews.com : 4.9464111328125 detik | Banyak row : 63 | Banyak column : 7 
+Tanggal : 28-04-2022 09:42:38 | Waktu Scraping Detik.com : 115.91708827018738 detik | Banyak row : 55 | Banyak column : 7 
+Tanggal : 28-04-2022 09:42:38 | Waktu Scraping Total Waktu Scraping Ketiga Website : 175.92517757415771 detik | Banyak row : 200 | Banyak column : 7.0 
+Tanggal : 28-04-2022 10:42:42 | Waktu Scraping Liputan6.com : 57.83951234817505 detik | Banyak row : 80 | Banyak column : 7 
+Tanggal : 28-04-2022 10:42:42 | Waktu Scraping Tribunnews.com : 5.665741443634033 detik | Banyak row : 61 | Banyak column : 7 
+Tanggal : 28-04-2022 11:42:43 | Waktu Scraping Liputan6.com : 51.53703594207764 detik | Banyak row : 79 | Banyak column : 7 
+Tanggal : 28-04-2022 11:42:43 | Waktu Scraping Tribunnews.com : 5.038088083267212 detik | Banyak row : 61 | Banyak column : 7 
+Tanggal : 28-04-2022 11:42:43 | Waktu Scraping Detik.com : 111.03545022010803 detik | Banyak row : 52 | Banyak column : 7 
+Tanggal : 28-04-2022 11:42:43 | Waktu Scraping Total Waktu Scraping Ketiga Website : 167.61057424545288 detik | Banyak row : 192 | Banyak column : 7.0 
+Tanggal : 28-04-2022 12:42:45 | Waktu Scraping Liputan6.com : 56.31142044067383 detik | Banyak row : 81 | Banyak column : 7 
+Tanggal : 28-04-2022 12:42:45 | Waktu Scraping Tribunnews.com : 5.045884609222412 detik | Banyak row : 56 | Banyak column : 7 
+Tanggal : 28-04-2022 12:42:45 | Waktu Scraping Detik.com : 105.97998976707458 detik | Banyak row : 50 | Banyak column : 7 
+Tanggal : 28-04-2022 12:42:45 | Waktu Scraping Total Waktu Scraping Ketiga Website : 167.33729481697083 detik | Banyak row : 187 | Banyak column : 7.0 
+Tanggal : 28-04-2022 13:42:47 | Waktu Scraping Liputan6.com : 52.90288305282593 detik | Banyak row : 77 | Banyak column : 7 
+Tanggal : 28-04-2022 13:42:47 | Waktu Scraping Tribunnews.com : 5.174865007400513 detik | Banyak row : 62 | Banyak column : 7 
+Tanggal : 28-04-2022 13:42:47 | Waktu Scraping Detik.com : 121.57500433921814 detik | Banyak row : 52 | Banyak column : 7 
+Tanggal : 28-04-2022 13:42:47 | Waktu Scraping Total Waktu Scraping Ketiga Website : 179.65275239944458 detik | Banyak row : 191 | Banyak column : 7.0 
+Tanggal : 28-04-2022 14:42:50 | Waktu Scraping Liputan6.com : 54.639309883117676 detik | Banyak row : 77 | Banyak column : 7 
+Tanggal : 28-04-2022 14:42:50 | Waktu Scraping Tribunnews.com : 5.0593180656433105 detik | Banyak row : 61 | Banyak column : 7 
+Tanggal : 28-04-2022 14:42:50 | Waktu Scraping Detik.com : 109.42416954040527 detik | Banyak row : 51 | Banyak column : 7 
+Tanggal : 28-04-2022 14:42:50 | Waktu Scraping Total Waktu Scraping Ketiga Website : 169.12279748916626 detik | Banyak row : 189 | Banyak column : 7.0 
+Tanggal : 28-04-2022 15:42:51 | Waktu Scraping Liputan6.com : 53.79767823219299 detik | Banyak row : 80 | Banyak column : 7 
+Tanggal : 28-04-2022 15:42:51 | Waktu Scraping Tribunnews.com : 4.982271909713745 detik | Banyak row : 60 | Banyak column : 7 
+Tanggal : 28-04-2022 15:42:51 | Waktu Scraping Detik.com : 113.65491151809692 detik | Banyak row : 51 | Banyak column : 7 
+Tanggal : 28-04-2022 15:42:51 | Waktu Scraping Total Waktu Scraping Ketiga Website : 172.43486166000366 detik | Banyak row : 191 | Banyak column : 7.0 
+Tanggal : 28-04-2022 16:42:53 | Waktu Scraping Liputan6.com : 73.53224778175354 detik | Banyak row : 81 | Banyak column : 7 
+Tanggal : 28-04-2022 16:42:53 | Waktu Scraping Tribunnews.com : 5.089187383651733 detik | Banyak row : 57 | Banyak column : 7 
+Tanggal : 28-04-2022 16:42:53 | Waktu Scraping Detik.com : 112.02224111557007 detik | Banyak row : 42 | Banyak column : 7 
+Tanggal : 28-04-2022 16:42:53 | Waktu Scraping Total Waktu Scraping Ketiga Website : 190.64367628097534 detik | Banyak row : 180 | Banyak column : 7.0 
+
+==============================================================================================================================
+
+Tanggal : 28-04-2022 17:42:55 | Waktu Scraping Liputan6.com : 79.03663754463196 detik | Banyak row : 82 | Banyak column : 7 
+Tanggal : 28-04-2022 17:42:55 | Waktu Scraping Tribunnews.com : 5.573131084442139 detik | Banyak row : 59 | Banyak column : 7 
+Tanggal : 28-04-2022 17:42:55 | Waktu Scraping Detik.com : 105.54834604263306 detik | Banyak row : 44 | Banyak column : 7 
+Tanggal : 28-04-2022 17:42:55 | Waktu Scraping Total Waktu Scraping Ketiga Website : 190.15811467170715 detik | Banyak row : 185 | Banyak column : 7.0 
+Tanggal : 28-04-2022 18:42:58 | Waktu Scraping Liputan6.com : 59.912383794784546 detik | Banyak row : 83 | Banyak column : 7 
+Tanggal : 28-04-2022 18:42:58 | Waktu Scraping Tribunnews.com : 5.239772796630859 detik | Banyak row : 59 | Banyak column : 7 
+Tanggal : 28-04-2022 18:42:58 | Waktu Scraping Detik.com : 103.89773035049438 detik | Banyak row : 43 | Banyak column : 7 
+Tanggal : 28-04-2022 18:42:58 | Waktu Scraping Total Waktu Scraping Ketiga Website : 169.0498869419098 detik | Banyak row : 185 | Banyak column : 7.0 
+Tanggal : 28-04-2022 19:43:00 | Waktu Scraping Liputan6.com : 61.38015937805176 detik | Banyak row : 82 | Banyak column : 7 
+Tanggal : 28-04-2022 19:43:00 | Waktu Scraping Tribunnews.com : 5.093111753463745 detik | Banyak row : 62 | Banyak column : 7 
+Tanggal : 28-04-2022 19:43:00 | Waktu Scraping Detik.com : 104.61925387382507 detik | Banyak row : 43 | Banyak column : 7 
+Tanggal : 28-04-2022 19:43:00 | Waktu Scraping Total Waktu Scraping Ketiga Website : 171.09252500534058 detik | Banyak row : 187 | Banyak column : 7.0 
+Tanggal : 28-04-2022 20:43:02 | Waktu Scraping Liputan6.com : 67.76718854904175 detik | Banyak row : 83 | Banyak column : 7 
+Tanggal : 28-04-2022 20:43:02 | Waktu Scraping Tribunnews.com : 5.750871181488037 detik | Banyak row : 62 | Banyak column : 7 
+Tanggal : 28-04-2022 20:43:02 | Waktu Scraping Detik.com : 100.13337445259094 detik | Banyak row : 44 | Banyak column : 7 
+Tanggal : 28-04-2022 20:43:02 | Waktu Scraping Total Waktu Scraping Ketiga Website : 173.65143418312073 detik | Banyak row : 189 | Banyak column : 7.0 
+Tanggal : 28-04-2022 21:43:05 | Waktu Scraping Liputan6.com : 60.375423192977905 detik | Banyak row : 83 | Banyak column : 7 
+Tanggal : 28-04-2022 21:43:05 | Waktu Scraping Tribunnews.com : 5.317434549331665 detik | Banyak row : 53 | Banyak column : 7 
+Tanggal : 28-04-2022 21:43:05 | Waktu Scraping Detik.com : 105.54543590545654 detik | Banyak row : 40 | Banyak column : 7 
+Tanggal : 28-04-2022 21:43:05 | Waktu Scraping Total Waktu Scraping Ketiga Website : 171.2382936477661 detik | Banyak row : 176 | Banyak column : 7.0 
+Tanggal : 28-04-2022 22:43:07 | Waktu Scraping Liputan6.com : 59.547823667526245 detik | Banyak row : 83 | Banyak column : 7 
+Tanggal : 28-04-2022 22:43:07 | Waktu Scraping Tribunnews.com : 5.396620273590088 detik | Banyak row : 53 | Banyak column : 7 
+Tanggal : 28-04-2022 22:43:07 | Waktu Scraping Detik.com : 102.102783203125 detik | Banyak row : 44 | Banyak column : 7 
+Tanggal : 28-04-2022 22:43:07 | Waktu Scraping Total Waktu Scraping Ketiga Website : 167.04722714424133 detik | Banyak row : 180 | Banyak column : 7.0 
+Tanggal : 28-04-2022 23:43:09 | Waktu Scraping Liputan6.com : 58.79133462905884 detik | Banyak row : 84 | Banyak column : 7 
+Tanggal : 28-04-2022 23:43:09 | Waktu Scraping Tribunnews.com : 5.054388523101807 detik | Banyak row : 58 | Banyak column : 7 
+Tanggal : 28-04-2022 23:43:09 | Waktu Scraping Detik.com : 101.85119867324829 detik | Banyak row : 46 | Banyak column : 7 
+Tanggal : 28-04-2022 23:43:09 | Waktu Scraping Total Waktu Scraping Ketiga Website : 165.69692182540894 detik | Banyak row : 188 | Banyak column : 7.0 
+Tanggal : 29-04-2022 00:43:12 | Waktu Scraping Liputan6.com : 55.5084662437439 detik | Banyak row : 80 | Banyak column : 7 
+Tanggal : 29-04-2022 00:43:12 | Waktu Scraping Tribunnews.com : 12.490248918533325 detik | Banyak row : 57 | Banyak column : 7 
+Tanggal : 29-04-2022 00:43:12 | Waktu Scraping Detik.com : 103.02905511856079 detik | Banyak row : 43 | Banyak column : 7 
+Tanggal : 29-04-2022 00:43:12 | Waktu Scraping Total Waktu Scraping Ketiga Website : 171.027770280838 detik | Banyak row : 180 | Banyak column : 7.0 
+Tanggal : 29-04-2022 01:43:14 | Waktu Scraping Liputan6.com : 61.71266460418701 detik | Banyak row : 80 | Banyak column : 7 
+Tanggal : 29-04-2022 01:43:14 | Waktu Scraping Tribunnews.com : 10.066551685333252 detik | Banyak row : 56 | Banyak column : 7 
+Tanggal : 29-04-2022 01:43:14 | Waktu Scraping Detik.com : 109.33789443969727 detik | Banyak row : 49 | Banyak column : 7 
+Tanggal : 29-04-2022 01:43:14 | Waktu Scraping Total Waktu Scraping Ketiga Website : 181.11711072921753 detik | Banyak row : 185 | Banyak column : 7.0 
+Tanggal : 29-04-2022 02:43:17 | Waktu Scraping Liputan6.com : 54.29866886138916 detik | Banyak row : 76 | Banyak column : 7 
+Tanggal : 29-04-2022 02:43:17 | Waktu Scraping Tribunnews.com : 5.1320273876190186 detik | Banyak row : 56 | Banyak column : 7 
+Tanggal : 29-04-2022 02:43:17 | Waktu Scraping Detik.com : 103.9584231376648 detik | Banyak row : 44 | Banyak column : 7 
+Tanggal : 29-04-2022 02:43:17 | Waktu Scraping Total Waktu Scraping Ketiga Website : 163.38911938667297 detik | Banyak row : 176 | Banyak column : 7.0 
+Tanggal : 29-04-2022 03:43:18 | Waktu Scraping Liputan6.com : 56.71567940711975 detik | Banyak row : 81 | Banyak column : 7 
+Tanggal : 29-04-2022 03:43:18 | Waktu Scraping Tribunnews.com : 4.895718097686768 detik | Banyak row : 62 | Banyak column : 7 
+Tanggal : 29-04-2022 03:43:18 | Waktu Scraping Detik.com : 104.77800011634827 detik | Banyak row : 49 | Banyak column : 7 
+Tanggal : 29-04-2022 03:43:18 | Waktu Scraping Total Waktu Scraping Ketiga Website : 166.38939762115479 detik | Banyak row : 192 | Banyak column : 7.0 
+Tanggal : 29-04-2022 04:43:20 | Waktu Scraping Liputan6.com : 54.66953086853027 detik | Banyak row : 80 | Banyak column : 7 
+Tanggal : 29-04-2022 04:43:20 | Waktu Scraping Tribunnews.com : 4.92710542678833 detik | Banyak row : 59 | Banyak column : 7 
+Tanggal : 29-04-2022 04:43:20 | Waktu Scraping Detik.com : 104.47637963294983 detik | Banyak row : 51 | Banyak column : 7 
+Tanggal : 29-04-2022 04:43:20 | Waktu Scraping Total Waktu Scraping Ketiga Website : 164.07301592826843 detik | Banyak row : 190 | Banyak column : 7.0 
+Tanggal : 29-04-2022 05:43:23 | Waktu Scraping Liputan6.com : 54.52971959114075 detik | Banyak row : 79 | Banyak column : 7 
+Tanggal : 29-04-2022 05:43:23 | Waktu Scraping Tribunnews.com : 4.989521026611328 detik | Banyak row : 58 | Banyak column : 7 
+Tanggal : 29-04-2022 05:43:23 | Waktu Scraping Detik.com : 114.6423008441925 detik | Banyak row : 47 | Banyak column : 7 
+Tanggal : 29-04-2022 05:43:23 | Waktu Scraping Total Waktu Scraping Ketiga Website : 174.16154146194458 detik | Banyak row : 184 | Banyak column : 7.0 
+Tanggal : 29-04-2022 06:43:26 | Waktu Scraping Liputan6.com : 53.81436204910278 detik | Banyak row : 77 | Banyak column : 7 
+Tanggal : 29-04-2022 06:43:26 | Waktu Scraping Tribunnews.com : 5.067552328109741 detik | Banyak row : 58 | Banyak column : 7 
+Tanggal : 29-04-2022 06:43:26 | Waktu Scraping Detik.com : 99.0509033203125 detik | Banyak row : 49 | Banyak column : 7 
+Tanggal : 29-04-2022 06:43:26 | Waktu Scraping Total Waktu Scraping Ketiga Website : 157.93281769752502 detik | Banyak row : 184 | Banyak column : 7.0 
+Tanggal : 29-04-2022 07:43:28 | Waktu Scraping Liputan6.com : 50.91023921966553 detik | Banyak row : 73 | Banyak column : 7 
+Tanggal : 29-04-2022 07:43:28 | Waktu Scraping Tribunnews.com : 4.964378595352173 detik | Banyak row : 61 | Banyak column : 7 
+Tanggal : 29-04-2022 07:43:28 | Waktu Scraping Detik.com : 107.08167719841003 detik | Banyak row : 50 | Banyak column : 7 
+Tanggal : 29-04-2022 07:43:28 | Waktu Scraping Total Waktu Scraping Ketiga Website : 162.95629501342773 detik | Banyak row : 184 | Banyak column : 7.0 
+Tanggal : 29-04-2022 08:43:30 | Waktu Scraping Liputan6.com : 52.48696994781494 detik | Banyak row : 73 | Banyak column : 7 
+Tanggal : 29-04-2022 08:43:30 | Waktu Scraping Tribunnews.com : 4.925218105316162 detik | Banyak row : 60 | Banyak column : 7 
+Tanggal : 29-04-2022 08:43:30 | Waktu Scraping Detik.com : 105.20241641998291 detik | Banyak row : 49 | Banyak column : 7 
+Tanggal : 29-04-2022 08:43:30 | Waktu Scraping Total Waktu Scraping Ketiga Website : 162.614604473114 detik | Banyak row : 182 | Banyak column : 7.0 
+Tanggal : 29-04-2022 09:43:32 | Waktu Scraping Liputan6.com : 55.156352519989014 detik | Banyak row : 77 | Banyak column : 7 
+Tanggal : 29-04-2022 09:43:32 | Waktu Scraping Tribunnews.com : 5.821184158325195 detik | Banyak row : 61 | Banyak column : 7 
+Tanggal : 29-04-2022 09:43:32 | Waktu Scraping Detik.com : 103.67943215370178 detik | Banyak row : 49 | Banyak column : 7 
+Tanggal : 29-04-2022 09:43:32 | Waktu Scraping Total Waktu Scraping Ketiga Website : 164.656968832016 detik | Banyak row : 187 | Banyak column : 7.0 
+Tanggal : 29-04-2022 10:43:35 | Waktu Scraping Liputan6.com : 67.34273672103882 detik | Banyak row : 83 | Banyak column : 7 
+Tanggal : 29-04-2022 10:43:35 | Waktu Scraping Tribunnews.com : 5.041454315185547 detik | Banyak row : 58 | Banyak column : 7 
+Tanggal : 29-04-2022 10:43:35 | Waktu Scraping Detik.com : 103.15047001838684 detik | Banyak row : 47 | Banyak column : 7 
+Tanggal : 29-04-2022 10:43:35 | Waktu Scraping Total Waktu Scraping Ketiga Website : 175.5346610546112 detik | Banyak row : 188 | Banyak column : 7.0 
+Tanggal : 29-04-2022 11:43:37 | Waktu Scraping Liputan6.com : 59.638431549072266 detik | Banyak row : 82 | Banyak column : 7 
+Tanggal : 29-04-2022 11:43:37 | Waktu Scraping Tribunnews.com : 5.445844650268555 detik | Banyak row : 58 | Banyak column : 7 
+Tanggal : 29-04-2022 11:43:37 | Waktu Scraping Detik.com : 111.46406245231628 detik | Banyak row : 49 | Banyak column : 7 
+Tanggal : 29-04-2022 11:43:37 | Waktu Scraping Total Waktu Scraping Ketiga Website : 176.5483386516571 detik | Banyak row : 189 | Banyak column : 7.0 
+Tanggal : 29-04-2022 12:43:39 | Waktu Scraping Liputan6.com : 61.6085524559021 detik | Banyak row : 83 | Banyak column : 7 
+Tanggal : 29-04-2022 12:43:39 | Waktu Scraping Tribunnews.com : 6.513904333114624 detik | Banyak row : 61 | Banyak column : 7 
+Tanggal : 29-04-2022 12:43:39 | Waktu Scraping Detik.com : 110.13209366798401 detik | Banyak row : 50 | Banyak column : 7 
+Tanggal : 29-04-2022 12:43:39 | Waktu Scraping Total Waktu Scraping Ketiga Website : 178.25455045700073 detik | Banyak row : 194 | Banyak column : 7.0 
+Tanggal : 29-04-2022 13:43:42 | Waktu Scraping Liputan6.com : 55.82154989242554 detik | Banyak row : 82 | Banyak column : 7 
+Tanggal : 29-04-2022 13:43:42 | Waktu Scraping Tribunnews.com : 5.10376501083374 detik | Banyak row : 59 | Banyak column : 7 
+Tanggal : 29-04-2022 13:43:42 | Waktu Scraping Detik.com : 111.6278076171875 detik | Banyak row : 50 | Banyak column : 7 
+Tanggal : 29-04-2022 13:43:42 | Waktu Scraping Total Waktu Scraping Ketiga Website : 172.55312252044678 detik | Banyak row : 191 | Banyak column : 7.0 
+Tanggal : 29-04-2022 14:43:44 | Waktu Scraping Liputan6.com : 115.60571265220642 detik | Banyak row : 84 | Banyak column : 7 
+Tanggal : 29-04-2022 14:43:44 | Waktu Scraping Tribunnews.com : 5.125013113021851 detik | Banyak row : 61 | Banyak column : 7 
+Tanggal : 29-04-2022 14:43:44 | Waktu Scraping Detik.com : 109.01740503311157 detik | Banyak row : 44 | Banyak column : 7 
+Tanggal : 29-04-2022 14:43:44 | Waktu Scraping Total Waktu Scraping Ketiga Website : 229.74813079833984 detik | Banyak row : 189 | Banyak column : 7.0 
+Tanggal : 29-04-2022 15:43:46 | Waktu Scraping Liputan6.com : 57.855000257492065 detik | Banyak row : 84 | Banyak column : 7 
+Tanggal : 29-04-2022 15:43:46 | Waktu Scraping Tribunnews.com : 5.3406078815460205 detik | Banyak row : 59 | Banyak column : 7 
+Tanggal : 29-04-2022 15:43:46 | Waktu Scraping Detik.com : 100.30930399894714 detik | Banyak row : 48 | Banyak column : 7 
+Tanggal : 29-04-2022 15:43:46 | Waktu Scraping Total Waktu Scraping Ketiga Website : 163.50491213798523 detik | Banyak row : 191 | Banyak column : 7.0 
+Tanggal : 29-04-2022 16:43:48 | Waktu Scraping Liputan6.com : 80.19879865646362 detik | Banyak row : 84 | Banyak column : 7 
+Tanggal : 29-04-2022 16:43:48 | Waktu Scraping Tribunnews.com : 7.3097686767578125 detik | Banyak row : 61 | Banyak column : 7 
+Tanggal : 29-04-2022 16:43:48 | Waktu Scraping Detik.com : 107.55881810188293 detik | Banyak row : 47 | Banyak column : 7 
+Tanggal : 29-04-2022 16:43:48 | Waktu Scraping Total Waktu Scraping Ketiga Website : 195.06738543510437 detik | Banyak row : 192 | Banyak column : 7.0 
+
+==============================================================================================================================
+
+Tanggal : 29-04-2022 17:43:51 | Waktu Scraping Liputan6.com : 63.11934423446655 detik | Banyak row : 84 | Banyak column : 7 
+Tanggal : 29-04-2022 17:43:51 | Waktu Scraping Tribunnews.com : 5.372509956359863 detik | Banyak row : 62 | Banyak column : 7 
+Tanggal : 29-04-2022 17:43:51 | Waktu Scraping Detik.com : 62.25053548812866 detik | Banyak row : 29 | Banyak column : 7 
+Tanggal : 29-04-2022 17:43:51 | Waktu Scraping Total Waktu Scraping Ketiga Website : 130.74238967895508 detik | Banyak row : 175 | Banyak column : 7.0 
+Tanggal : 29-04-2022 18:43:53 | Waktu Scraping Liputan6.com : 64.3029522895813 detik | Banyak row : 84 | Banyak column : 7 
+Tanggal : 29-04-2022 18:43:53 | Waktu Scraping Tribunnews.com : 5.180570363998413 detik | Banyak row : 61 | Banyak column : 7 
+Tanggal : 29-04-2022 18:43:53 | Waktu Scraping Detik.com : 105.8719630241394 detik | Banyak row : 45 | Banyak column : 7 
+Tanggal : 29-04-2022 18:43:53 | Waktu Scraping Total Waktu Scraping Ketiga Website : 175.35548567771912 detik | Banyak row : 190 | Banyak column : 7.0 
+Tanggal : 29-04-2022 19:43:55 | Waktu Scraping Liputan6.com : 59.922452449798584 detik | Banyak row : 84 | Banyak column : 7 
+Tanggal : 29-04-2022 19:43:55 | Waktu Scraping Tribunnews.com : 5.22492241859436 detik | Banyak row : 61 | Banyak column : 7 
+Tanggal : 29-04-2022 19:43:55 | Waktu Scraping Detik.com : 104.04661870002747 detik | Banyak row : 43 | Banyak column : 7 
+Tanggal : 29-04-2022 19:43:55 | Waktu Scraping Total Waktu Scraping Ketiga Website : 169.1939935684204 detik | Banyak row : 188 | Banyak column : 7.0 
+Tanggal : 29-04-2022 20:44:00 | Waktu Scraping Liputan6.com : 67.89312076568604 detik | Banyak row : 84 | Banyak column : 7 
+Tanggal : 29-04-2022 20:44:00 | Waktu Scraping Tribunnews.com : 5.092098712921143 detik | Banyak row : 52 | Banyak column : 7 
+Tanggal : 29-04-2022 20:44:00 | Waktu Scraping Detik.com : 104.52876782417297 detik | Banyak row : 39 | Banyak column : 7 
+Tanggal : 29-04-2022 20:44:00 | Waktu Scraping Total Waktu Scraping Ketiga Website : 177.51398730278015 detik | Banyak row : 175 | Banyak column : 7.0 
+Tanggal : 29-04-2022 21:44:01 | Waktu Scraping Liputan6.com : 65.44301271438599 detik | Banyak row : 84 | Banyak column : 7 
+Tanggal : 29-04-2022 21:44:01 | Waktu Scraping Tribunnews.com : 4.986665964126587 detik | Banyak row : 46 | Banyak column : 7 
+Tanggal : 29-04-2022 21:44:01 | Waktu Scraping Detik.com : 104.7930998802185 detik | Banyak row : 37 | Banyak column : 7 
+Tanggal : 29-04-2022 21:44:01 | Waktu Scraping Total Waktu Scraping Ketiga Website : 175.22277855873108 detik | Banyak row : 167 | Banyak column : 7.0 
+Tanggal : 29-04-2022 22:44:02 | Waktu Scraping Liputan6.com : 57.968268632888794 detik | Banyak row : 84 | Banyak column : 7 
+Tanggal : 29-04-2022 22:44:02 | Waktu Scraping Tribunnews.com : 5.0545432567596436 detik | Banyak row : 46 | Banyak column : 7 
+Tanggal : 29-04-2022 22:44:02 | Waktu Scraping Detik.com : 103.50835275650024 detik | Banyak row : 41 | Banyak column : 7 
+Tanggal : 29-04-2022 22:44:02 | Waktu Scraping Total Waktu Scraping Ketiga Website : 166.53116464614868 detik | Banyak row : 171 | Banyak column : 7.0 
+Tanggal : 29-04-2022 23:44:04 | Waktu Scraping Liputan6.com : 62.22848844528198 detik | Banyak row : 83 | Banyak column : 7 
+Tanggal : 29-04-2022 23:44:04 | Waktu Scraping Tribunnews.com : 6.1524248123168945 detik | Banyak row : 50 | Banyak column : 7 
+Tanggal : 29-04-2022 23:44:04 | Waktu Scraping Detik.com : 99.5363028049469 detik | Banyak row : 43 | Banyak column : 7 
+Tanggal : 29-04-2022 23:44:04 | Waktu Scraping Total Waktu Scraping Ketiga Website : 167.91721606254578 detik | Banyak row : 176 | Banyak column : 7.0 
+Tanggal : 30-04-2022 00:44:07 | Waktu Scraping Liputan6.com : 57.982794523239136 detik | Banyak row : 77 | Banyak column : 7 
+Tanggal : 30-04-2022 00:44:07 | Waktu Scraping Tribunnews.com : 5.215434789657593 detik | Banyak row : 53 | Banyak column : 7 
+Tanggal : 30-04-2022 00:44:07 | Waktu Scraping Detik.com : 100.22343802452087 detik | Banyak row : 43 | Banyak column : 7 
+Tanggal : 30-04-2022 00:44:07 | Waktu Scraping Total Waktu Scraping Ketiga Website : 163.4216673374176 detik | Banyak row : 173 | Banyak column : 7.0 
+Tanggal : 30-04-2022 01:44:09 | Waktu Scraping Liputan6.com : 55.64344811439514 detik | Banyak row : 77 | Banyak column : 7 
+Tanggal : 30-04-2022 01:44:09 | Waktu Scraping Tribunnews.com : 5.73686671257019 detik | Banyak row : 57 | Banyak column : 7 
+Tanggal : 30-04-2022 01:44:09 | Waktu Scraping Detik.com : 109.36678695678711 detik | Banyak row : 48 | Banyak column : 7 
+Tanggal : 30-04-2022 01:44:09 | Waktu Scraping Total Waktu Scraping Ketiga Website : 170.74710178375244 detik | Banyak row : 182 | Banyak column : 7.0 
+Tanggal : 30-04-2022 02:44:11 | Waktu Scraping Liputan6.com : 52.351547718048096 detik | Banyak row : 77 | Banyak column : 7 
+Tanggal : 30-04-2022 02:44:11 | Waktu Scraping Tribunnews.com : 5.833436727523804 detik | Banyak row : 60 | Banyak column : 7 
+Tanggal : 30-04-2022 02:44:11 | Waktu Scraping Detik.com : 111.75641012191772 detik | Banyak row : 48 | Banyak column : 7 
+Tanggal : 30-04-2022 02:44:11 | Waktu Scraping Total Waktu Scraping Ketiga Website : 169.94139456748962 detik | Banyak row : 185 | Banyak column : 7.0 
+Tanggal : 30-04-2022 03:44:14 | Waktu Scraping Liputan6.com : 54.346238136291504 detik | Banyak row : 80 | Banyak column : 7 
+Tanggal : 30-04-2022 03:44:14 | Waktu Scraping Tribunnews.com : 4.954855442047119 detik | Banyak row : 58 | Banyak column : 7 
+Tanggal : 30-04-2022 03:44:14 | Waktu Scraping Detik.com : 103.63628101348877 detik | Banyak row : 49 | Banyak column : 7 
+Tanggal : 30-04-2022 03:44:14 | Waktu Scraping Total Waktu Scraping Ketiga Website : 162.9373745918274 detik | Banyak row : 187 | Banyak column : 7.0 

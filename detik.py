@@ -113,17 +113,14 @@ def kerangkaDetik(sub_soup, link, category):
                 get_text.decompose()
         decomposeElement(contents)
         content = loopContent_P(contents)
-        # print(content)
     elif(sub_soup.find('div', class_="itp_bodycontent read__content pull-left")):
         contents = sub_soup.find(
             'div', class_="itp_bodycontent read__content pull-left")
         content = loopContent_P(contents)
-        # print(content)
     elif(sub_soup.find('div', class_="itp_bodycontent detail__body-text")):
         contents = sub_soup.find(
             'div', class_="itp_bodycontent detail__body-text")
         content = loopContent_P(contents)
-        # print(content)
     elif(sub_soup.find('article', class_="detail")):  # content 2 body
         content_1 = sub_soup.find(
             'div', class_="detail__body-text").text.replace("\n", "")
@@ -132,28 +129,23 @@ def kerangkaDetik(sub_soup, link, category):
         arr_content.append(content_1)
         arr_content.append(content_2)
         content = "".join(arr_content)
-        # print(content)
     elif(sub_soup.find('div', class_="detail__body-text")):
         content = sub_soup.find('div', class_="detail__body-text").text
-        # print(content)
     elif(sub_soup.find('div', class_="column full body_text")):  # detik intermeso
         contents = sub_soup.find_all('div', class_="column full body_text")
         arr_content = []
         for data_content in contents:
             arr_content.append(loopContent_P(data_content))
-        content = "".join(arr_content)
-        # print(content) #hilangin penulis
+        content = "".join(arr_content)  # hilangin penulis
     elif(sub_soup.find('div', class_="itp_bodycontent detail_text group")):
         contents = sub_soup.find(
             'div', class_="itp_bodycontent detail_text group")
         decomposeElement(contents)
         content = loopContent_P(contents)
-        # print(content)
     elif(sub_soup.find('div', class_="itp_bodycontent detail_text")):
         contents = sub_soup.find('div', class_="itp_bodycontent detail_text")
         decomposeElement(contents)
         content = loopContent_P(contents)
-        # print(content)
     elif(sub_soup.find('div', class_="group detail_wrap itp_bodycontent_wrapper")):
         contents = sub_soup.find(
             'div', class_="group detail_wrap itp_bodycontent_wrapper")
@@ -201,14 +193,14 @@ html_link_famous = requests.get(link_famous).text
 soup_main = BeautifulSoup(html_link_famous, 'lxml')
 famous = soup_main.find_all('article', class_="list-content__item")
 
-# for many_famous in famous:
-#     setUp(many_famous, 'popular')
+for many_famous in famous:
+    setUp(many_famous, 'popular')
 
-# for headline in headlines:
-#     setUp(headline, 'headline')
+for headline in headlines:
+    setUp(headline, 'headline')
 
-# for new in news:
-#     setUp(new, 'i-link')
+for new in news:
+    setUp(new, 'i-link')
 
 listDetik = pd.DataFrame(items, columns=[
                          'title', 'date', 'author', 'link', 'category', 'website', 'content'])

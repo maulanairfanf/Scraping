@@ -7,8 +7,11 @@ import time
 st = time.time()
 
 url = "https://www.liputan6.com/"
+headers = {
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0 Win64x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36 Edg/100.0.1185.50"}
+
 html_text = requests.get(
-    url).text
+    url, headers=headers).text
 soup = BeautifulSoup(html_text, 'lxml')
 for data in soup(['style', 'script']):
     data.decompose()
@@ -98,7 +101,7 @@ def setUp(new, category):
         link_new = new.a['href']
     else:
         link_new = new['href']
-    html_link_new = requests.get(link_new).text
+    html_link_new = requests.get(link_new, headers=headers).text
     soup_new = BeautifulSoup(html_link_new, 'lxml')
     kerangkaLiputan(soup_new, link_new, category)
 
@@ -132,4 +135,4 @@ column_liputan = listLiputan.shape[1]
 print(listLiputan)
 
 print('Execution time Liputan6.com :', elapsed_time_liputan, 'seconds')
-executeTime(elapsed_time_liputan,row_liputan, column_liputan, "Liputan6.com")
+executeTime(elapsed_time_liputan, row_liputan, column_liputan, "Liputan6.com")
