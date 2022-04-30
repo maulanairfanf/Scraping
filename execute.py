@@ -19,27 +19,33 @@ for index, row in data.iterrows():
         "Waktu Scraping", " ").replace("detik", " ")
     waktu = waktu_website.split(':')[1].strip()
     website = waktu_website.split(':')[0].strip()
-    # print(row['row'].split(":")[1])
+    row = row['row'].split(":")[1].strip()
     if(website == "Liputan6.com"):
         # arr_liputan.append(website)
-        arr_liputan.append(float(waktu))
+        arr_liputan.append([float(waktu), int(row)])
     elif(website == "Tribunnews.com"):
         # arr_tribun.append(website)
-        arr_tribun.append(float(waktu))
+        arr_tribun.append([float(waktu), int(row)])
     elif(website == "Detik.com"):
         # arr_detik.append(website)
-        arr_detik.append(float(waktu))
+        arr_detik.append([float(waktu), int(row)])
     else:
         # arr_total.append(website)
-        arr_total.append(float(waktu))
+        arr_total.append([float(waktu), int(row)])
 
 
-def hitungWaktu(waktu, website):
+def hitungWaktu(arr, website):
     total_waktu = 0
+    total_data = 0
     for i in range(len(waktu)):
-        total_waktu = total_waktu + waktu[i]
-    rata_rata = total_waktu/len(waktu)
-    print("Waktu rata-rata", website, " : ", rata_rata)
+        total_waktu = total_waktu + arr[i][0]
+    for i in range(len(waktu)):
+        total_data = total_data + arr[i][1]
+    rata_rata_waktu = total_waktu/len(arr)
+    rata_rata_data = total_data/len(arr)
+    print("Waktu rata-rata", website, " : ", rata_rata_waktu)
+    print("Data rata-rata", website, " : ", rata_rata_data)
+    print("============================================================== \n")
 
 
 hitungWaktu(arr_liputan, 'website Liputan.com')
