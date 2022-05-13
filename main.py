@@ -1,4 +1,4 @@
-import psycopg2
+import mysql.connector
 import pandas as pd
 from liputan import listLiputan, elapsed_time_liputan, row_liputan, column_liputan
 from tribun import listTribun, elapsed_time_tribun, row_tribun, column_tribun
@@ -18,30 +18,39 @@ listBerita.reset_index(drop=True, inplace=True)
 listBerita.drop_duplicates(subset=["link"])
 # listBerita.to_excel(f"data/berita/Berita({currentDateTime}).xlsx", index=False)
 
+
 # conn = psycopg2.connect(
 #     database="d93p694gn91dn4", user='lcwsaujkplbtoa', password='f222a0c158038fbc55d1b815143ab41e42f3ae27f9d8d999ef7c944e4490cda6', host='ec2-34-197-84-74.compute-1.amazonaws.com', port='5432'
 # )
-# cursor = conn.cursor()
+DATABASE_URL = 'mysql+pymysql://u116665791_maulanairfanf:TanpaPassword79@31.220.110.101:3306/u116665791_WebScraping'
 
-# try:
-#     cur = conn.cursor()
-#     for index, row in listBerita.iterrows():
-#         title = row["title"]
-#         date = row["date"]
-#         author = row["author"]
-#         link = row["link"]
-#         category = row["category"]
-#         website = row["website"]
-#         content = row["content"]
-#         try:
-#             query = """INSERT into berita(title,date,author,link,category,website,content) VALUES (%s,%s,%s,%s,%s,%s,%s);"""
-#             column = (title, date, author, link, category, website, content)
-#             cursor.execute(query, column)
-#         except psycopg2.IntegrityError:
-#             conn.rollback()
-#         else:
-#             conn.commit()
+conn = mysql.connector.connect(
+    database="u116665791_WebScraping", user='u116665791_maulanairfanf', password='TanpaPassword79', host='31.220.110.101', port='3306'
+)
+if conn.is_connected():
+    print("Berhasil Connect")
 
-#         cur.close()
-# except Exception:
-#     print("error", Exception[0])
+cursor = conn.cursor()
+
+try:
+    cur = conn.cursor()
+    for index, row in listBerita.iterrows():
+        title = row["title"]
+        date = row["date"]
+        author = row["author"]
+        link = row["link"]
+        category = row["category"]
+        website = row["website"]
+        content = row["content"]
+        try:
+            query = """INSERT into berita(title,date,author,link,category,website,content) VALUES (%s,%s,%s,%s,%s,%s,%s);"""
+            column = (title, date, author, link, category, website, content)
+            cursor.execute(query, column)
+        except mysql.connector.IntegrityError:
+            conn.rollback()
+        else:
+            conn.commit()
+
+        cur.close()
+except Exception:
+    print("error", Exception[0])
