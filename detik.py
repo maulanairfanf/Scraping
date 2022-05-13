@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
-from help import configureDate, currentDateTime, executeTime
+from help import configureDate, executeTime
 import time
 
 st = time.time()
@@ -19,7 +19,6 @@ link_new_famous = soup.find('div', class_="box cb-mostpop").find(
     'a', class_="btn btn--default color-orange-light-1 btn--md")['href']
 # news_c = soup.find_all('div', class_="article_inview")
 # news_d = soup.find_all('article', class_="article_inview")
-
 
 def configureAuthor(site):
     return site.split('-')[0]

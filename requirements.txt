@@ -2,5 +2,6 @@ beautifulsoup4
 requests
 lxml
 pandas
-psycopg2-binary
 sqlalchemy
+openpyxl
+mysql-connector
