@@ -76,10 +76,13 @@ def kerangkaTribun(sub_soup, link, category):
 
 
 def setUp(new, category):
-    link_new = new['href']
-    html_link_new = requests.get(link_new, headers=headers).text
-    soup_new = BeautifulSoup(html_link_new, 'lxml')
-    kerangkaTribun(soup_new, link_new, category)
+    try:
+        link_new = new['href']
+        html_link_new = requests.get(link_new, headers=headers).text
+        soup_new = BeautifulSoup(html_link_new, 'lxml')
+        kerangkaTribun(soup_new, link_new, category)
+    except :
+        print("tribun error")
 
 
 items = []

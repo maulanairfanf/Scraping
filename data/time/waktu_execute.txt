@@ -1,0 +1,11 @@
+Tanggal : 17-05-2022 23:19:08 | Waktu Scraping Liputan6.com : 61.99209809303284 detik | Banyak row : 59 | Banyak column : 7 
+Tanggal : 17-05-2022 23:27:35 | Waktu Scraping Detik.com : 10.577237129211426 detik | Banyak row : 20 | Banyak column : 7 
+Tanggal : 17-05-2022 23:27:56 | Waktu Scraping Detik.com : 2.260322093963623 detik | Banyak row : 5 | Banyak column : 7 
+Tanggal : 17-05-2022 23:36:13 | Waktu Scraping Detik.com : 26.34982705116272 detik | Banyak row : 43 | Banyak column : 7 
+Tanggal : 17-05-2022 23:37:14 | Waktu Scraping Detik.com : 11.082231998443604 detik | Banyak row : 43 | Banyak column : 7 
+Tanggal : 17-05-2022 23:39:17 | Waktu Scraping Liputan6.com : 165.47877717018127 detik | Banyak row : 77 | Banyak column : 7 
+Tanggal : 17-05-2022 23:39:17 | Waktu Scraping Tribunnews.com : 6.7110276222229 detik | Banyak row : 60 | Banyak column : 7 
+Tanggal : 17-05-2022 23:39:17 | Waktu Scraping Detik.com : 27.214003324508667 detik | Banyak row : 43 | Banyak column : 7 
+Tanggal : 17-05-2022 23:42:55 | Waktu Scraping Liputan6.com : 59.49643063545227 detik | Banyak row : 82 | Banyak column : 7 
+Tanggal : 17-05-2022 23:42:55 | Waktu Scraping Tribunnews.com : 8.404738664627075 detik | Banyak row : 60 | Banyak column : 7 
+Tanggal : 17-05-2022 23:42:55 | Waktu Scraping Detik.com : 25.548139810562134 detik | Banyak row : 43 | Banyak column : 7 

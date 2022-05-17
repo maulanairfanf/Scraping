@@ -1,3 +1,4 @@
+from distutils.log import error
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
@@ -180,9 +181,13 @@ def setUp(new, category):
     else:
         link_new = new['i-link']
         category = 'biasa'
-    html_link_new = requests.get(link_new).text
-    soup_new = BeautifulSoup(html_link_new, 'lxml')
-    kerangkaDetik(soup_new, link_new, category)
+
+    try :
+        html_link_new = requests.get(link_new).text
+        soup_new = BeautifulSoup(html_link_new, 'lxml')
+        kerangkaDetik(soup_new, link_new, category)
+    except :
+        print("detik error")
 
 
 items = []

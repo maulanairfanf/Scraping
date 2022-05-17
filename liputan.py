@@ -1,3 +1,5 @@
+from ast import Try
+from distutils.log import error
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
@@ -8,7 +10,7 @@ st = time.time()
 
 url = "https://www.liputan6.com/"
 headers = {
-    "user-agent": "Mozilla/5.0 (Windows NT 10.0 Win64x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36 Edg/100.0.1185.50"}
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.47"}
 
 html_text = requests.get(
     url, headers=headers).text
@@ -101,9 +103,13 @@ def setUp(new, category):
         link_new = new.a['href']
     else:
         link_new = new['href']
-    html_link_new = requests.get(link_new, headers=headers).text
-    soup_new = BeautifulSoup(html_link_new, 'lxml')
-    kerangkaLiputan(soup_new, link_new, category)
+    
+    try:
+        html_link_new = requests.get(link_new, headers=headers).text
+        soup_new = BeautifulSoup(html_link_new, 'lxml')
+        kerangkaLiputan(soup_new, link_new, category)
+    except:
+        print("liputan error")
 
 
 items = []
