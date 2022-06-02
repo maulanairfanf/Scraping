@@ -1,16 +1,17 @@
-from ast import Try
-from distutils.log import error
+from bs4 import BeautifulSoup as bs
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
 from help import configureDate, currentDateTime, executeTime
 import time
+from random import choice
 
 st = time.time()
 
+
 url = "https://www.liputan6.com/"
 headers = {
-    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.47"}
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.53"}
 
 html_text = requests.get(
     url, headers=headers).text
@@ -98,18 +99,20 @@ def kerangkaLiputan(sub_soup, link, category):
     items.append(listItem)
 
 
+
 def setUp(new, category):
     if(category == 'popular'):
         link_new = new.a['href']
     else:
         link_new = new['href']
     
-    try:
-        html_link_new = requests.get(link_new, headers=headers).text
-        soup_new = BeautifulSoup(html_link_new, 'lxml')
-        kerangkaLiputan(soup_new, link_new, category)
-    except:
-        print("liputan error")
+    # try:
+  
+    html_link_new = requests.get(link_new, headers=headers).text
+    soup_new = BeautifulSoup(html_link_new, 'lxml')
+    kerangkaLiputan(soup_new, link_new, category)
+    # except:
+    #     print("liputan error")
 
 
 items = []

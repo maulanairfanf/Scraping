@@ -10,13 +10,17 @@ def configureDate(day, website):
     year = dateTime.date().strftime("%Y")
     change_month = configureMonth(day)
     if(website == 'tribun' or website == 'detik'):
-        remove_views = change_month.split(', ')[-1]
-        get_date = remove_views.rpartition(year)[0]
+        remove_before = change_month.split(', ')[-1]
+        date_month = remove_before.rpartition(year)[0]
+        get_year = remove_before.rpartition(year)[1]
         if(website == 'tribun'):
-            if(int(get_date.split(' ')[0]) < 10):
-                get_date = "0" + get_date
-        get_year = remove_views.rpartition(year)[1]
-        date = get_date + get_year
+            if(int(date_month.split(' ')[0]) < 10):
+                date_month = "0" + date_month
+            date = date_month + get_year
+        if(website == 'detik'):
+            get_date = date_month.split(' ')[0]
+            get_month = date_month.split(' ')[1]
+            date = get_date + " " + get_month + " " + get_year
     if(website == 'liputan'):
         date = change_month.split(', ')[0]
     return date.replace(" ", "-")
